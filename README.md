@@ -1,7 +1,9 @@
 #  UTE network 
 Ute network version 1 :
 
-.env in /client : REACT_APP_API_URL=http://localhost:8080
+.env in /client : 
+
+REACT_APP_API_URL=http://localhost:8080
 
 
 .env in /server : 
