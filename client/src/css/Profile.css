@@ -5,6 +5,19 @@ body {
     margin: 0 auto;
     box-shadow: 0 0 15px 3px #0003;
 }
+.profile-header{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action-buttons{
+  margin-top: 10px;
+}
+.profile-button{
+  display: flex;
+  margin-left: 0px;
+}
 .navbar-collapse.in {
   display: block !important;
 }
@@ -13,7 +26,7 @@ body {
 /*------------------------------------------------*/
 .user-profile {
   padding-bottom: 30px;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .profile-header-background {
@@ -26,10 +39,11 @@ body {
 
 .profile-info-left {
   position: relative;
-  top: -92px;
 }
 .profile-info-left img.avatar {
-  border: 2px solid #fff;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  overflow: hidden;
 }
 .profile-info-left h2 {
   font-family: "josefinslab-semibold";
@@ -185,6 +199,7 @@ body {
   border: none;
   padding: 0;
 }
+
 .activity-item .thumbnail img {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -429,16 +444,6 @@ figure.snip1205.hover i {
   transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-
-
-
-
-
-
-
-
-
-
 .nav-tabs .nav-item a.active{
   border-bottom: .214rem solid transparent;
   border-image: linear-gradient(to left, #56ccf2, #2f80ed);
@@ -450,3 +455,48 @@ figure.snip1205.hover i {
   font-size: medium;
   padding: 20px;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+  right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: gray;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: whitesmoke;}

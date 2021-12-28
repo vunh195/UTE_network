@@ -47,7 +47,6 @@ class Posts extends Component {
 
     renderPosts = (posts) => {
         return (
-            <div className="row">
                 <InfiniteScroll
                     dataLength={posts.length}
                     next={this.fetchData}
@@ -119,7 +118,6 @@ class Posts extends Component {
                         );
                     })}
                 </InfiniteScroll>
-            </div>
         );
     };
 

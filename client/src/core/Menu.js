@@ -12,7 +12,7 @@ const isActive = (history, path) => {
 }
 
 const Menu = (props) => (
-    <nav className="navbar navbar-expand-lg navbar-dark"  
+    <nav className="navbar navbar-expand-lg"  
         style={{ 
             background: "#ffff", 
             paddingTop: "15px",

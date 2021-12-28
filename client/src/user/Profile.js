@@ -126,37 +126,41 @@ class Profile extends Component {
                                 onError={i => (i.target.src = DefaultProfile)} 
                                 className="avatar img-circle" 
                             />
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-8">
+                    <div className="profile-info-right">
+                        <div className='profile-header'>
                             <h2 className="mt-2" >{user.name}</h2>
+                            <div className="setting" ref={this.setting}>
+                                <div class="dropdown">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                        <div class="dropdown-content">
+                                        <a href="#">
+                                            <Link 
+                                                className="btn btn-flat-secondary"
+                                                    to={`/user/edit/${user._id}`}>
+                                                    Edit Profile
+                                            </Link></a>
+                                        <a href="#">
+                                            <DeleteUser userId={user._id} />
+                                        </a>
+                                        </div>
+                                </div>
+                        </div>
                         </div>
                         <div className="action-buttons">
                             {isAuthenticated().user && isAuthenticated().user._id === user._id ? (
                                 <>
-                                <div className="row">
-                                    <div className="col-md-4 col-xs-6">
-                                        <Link 
-                                            className="btn btn-sm btn-raised btn-primary"
-                                            to={`/post/create`}
-                                        >
-                                            Create Post
-                                        </Link>
-                                    </div>
-                                    <div className="col-md-4 col-xs-6">
-                                        <Link 
-                                        className="btn btn-sm btn-raised btn-dark"
-                                            to={`/user/edit/${user._id}`}
-                                        >
-                                            Edit Profile
-                                        </Link>
-                                    </div>
-
-                                </div>
-                                <div className="mt-2">
-                                    <DeleteUser userId={user._id} />
-                                </div>
+                                
                                 </>
                             ): (
-                                <div className="row">
-                                    <div className="col-md-6 col-xs-6">
+                                <div className="profile-button">
+                                    <div className="col-md-6 col-xs-6" >
+                                        <FollowProfileButton following={following} onButtonClick={this.clickFollowButton} />
+                                    </div>
+                                    <div className="col-md-6 col-xs-6" style={{marginleft:'0px'}}>
                                         <Link 
                                             className="btn btn-sm btn-raised btn-success ml-3"
                                             to={`/chat/${isAuthenticated().user._id}/${user._id}`}
@@ -164,27 +168,15 @@ class Profile extends Component {
                                             Message
                                         </Link>
                                     </div>
-                                    <div className="col-md-6 col-xs-6">
-                                        <FollowProfileButton following={following} onButtonClick={this.clickFollowButton} />
-                                    </div>
                                 </div>                                            
                             )}
                             
                         </div>
+                        
                         <div className="section">
-                            <h3>About Me</h3>
                             <p>{user.about}</p>
                         </div>
-                        <div className="section">
-                            <h3>Statistics</h3>
-                            <p><span className="badge badge-pill badge-primary">{user.following.length}</span> Following</p>
-                            <p><span className="badge badge-pill badge-success">{user.followers.length}</span> Followers</p>
-                            <p><span className="badge badge-pill badge-warning">{posts.length}</span> Posts</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-8">
-                    <div className="profile-info-right">
+
                         <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
                             <Tab label={postsBadge} className="tab-title-name">
                                 <div className="row">
