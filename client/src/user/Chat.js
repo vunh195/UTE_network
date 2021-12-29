@@ -135,7 +135,6 @@ class Chat extends Component {
                     { DisplayTime12Hour(new Date(chat.time)) }
                     {/* <br /> */}
                     {/* {new Date(chat.time).getDate()} / {new Date(chat.time).getMonth()+1} / {new Date(chat.time).getFullYear()} */}
-                    <span className="fa fa-check-circle ml-1"></span>
                 </div>
                 <div className="chat-text">
                     {chat.message}
@@ -154,7 +153,6 @@ class Chat extends Component {
                     { DisplayTime12Hour(new Date(chat.time)) }
                     {/* <br /> */}
                     {/* {new Date(chat.time).getDate()} / {new Date(chat.time).getMonth()+1} / {new Date(chat.time).getFullYear()} */}
-                    <span className="fa fa-check-circle ml-1"></span>
                 </div>
             </li>
         }

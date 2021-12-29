@@ -11,6 +11,7 @@ import {timeDifference} from './timeDifference';
 
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
+import '../css/SinglePost.css';
 
 
 class SinglePost extends Component {
@@ -106,7 +107,6 @@ class SinglePost extends Component {
             ]
         });
     }
-    
 
     renderPost = (post) => {
         const posterId = post.postedBy ? post.postedBy._id : "";
@@ -120,26 +120,56 @@ class SinglePost extends Component {
             return <Redirect to='/signin'></Redirect>
         }
         return(
-            <div className="card col-md-12 mb-5" style={{ padding: "0" }} >
+            <div className="card col-md-12 mb-5" style={{ padding: "0", borderRadius:"20px"}} >
                 <div className="card-header">
-                    <img 
-                        className="mb-1 mr-2"
-                        style={{ height: "40px", width: "40px", borderRadius: "50%"  }} 
-                        src={`${process.env.REACT_APP_API_URL}/user/photo/${posterId}`}
-                        onError={i => (i.target.src = DefaultProfile)} 
-                        alt={posterName}
-                    />
-                    <Link to={`/user/${posterId}`} style={{fontSize: "24px"}}>
-                            {posterName}
-                    </Link>
-                    <p
-                        style={{ marginBottom: "0" }}
-                        className="pull-right mt-2"
-                    >
-                        <span className="ml-2">
-                            <i className="far fa-clock"></i>{" "+timeDifference(new Date(), new Date(post.created))}
-                        </span>
-                    </p>
+                    <div className="header-left">
+                        <Link
+                            to={`/`}
+                            className="btn btn-raised-secondary btn-sm mr-1">
+                                <i className="fas fa-arrow-left"></i>
+                        </Link>
+                        <img 
+                            className="mb-1 mr-2"
+                            style={{ height: "40px", width: "40px", borderRadius: "50%"  }} 
+                            src={`${process.env.REACT_APP_API_URL}/user/photo/${posterId}`}
+                            onError={i => (i.target.src = DefaultProfile)} 
+                            alt={posterName}
+                        />
+                        <Link to={`/user/${posterId}`} style={{fontSize: "24px"}}>
+                                {posterName}
+                        </Link>
+                    </div>
+
+                    <div className="header-right">
+                        <p
+                            style={{ marginBottom: "0" }}
+                            className="pull-right mt-2">
+                            <span className="ml-2">
+                                <i className="far fa-clock"></i>{" "+timeDifference(new Date(), new Date(post.created))}
+                            </span>
+                        </p>
+                        {isAuthenticated().user && isAuthenticated().user._id === post.postedBy._id && (
+                            <>
+                                <div className="setting" ref={this.setting}>
+                                    <div className="dropdown">
+                                        <button type="button" class="dropbtn">
+                                            <i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-content">
+                                            <a href="#">
+                                                <Link
+                                                    to={`/post/edit/${post._id}`}> Edit</Link>
+                                            </a>
+                                            <a href="#">
+                                                <Link 
+                                                    onClick={this.deleteConfirmed}> Delete</Link>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+
+                    </div>
                 </div>
                 <Link to={`/post/${post._id}`}>
                     <img 
@@ -155,7 +185,7 @@ class SinglePost extends Component {
                 </Link>
                     {like ? (
                         <h3>
-                            <i onClick={this.likeToggle} className="fa fa-heart" style={{color: "red", padding: "10px", cursor: "pointer"}} aria-hidden="true"></i>
+                            <i onClick={this.likeToggle} className="fa fa-heart " style={{color: "red", padding: "10px", cursor: "pointer"}} aria-hidden="true"></i>
                             <i className="far fa-comments ml-3"></i> 
                         </h3>
                     ) : (
@@ -166,26 +196,24 @@ class SinglePost extends Component {
                     )}
                     <span style={{fontSize: "20px"}} className="ml-3" >{likes} Likes </span>
                 
-                <div className="card-body">
+                <div className="card-body" >
                     <h5 className="card-title">{post.title}</h5>
                     <p className="card-text">{post.body}</p>
-                    <Link
-                        to={`/`}
-                        className="btn btn-raised btn-sm btn-primary mr-5">
-                        Back to posts
-                    </Link>
-                    {isAuthenticated().user && isAuthenticated().user._id === post.postedBy._id && (
+
+
+
+                    {/* {isAuthenticated().user && isAuthenticated().user._id === post.postedBy._id && (
                         <>
                             <Link
                                 to={`/post/edit/${post._id}`}
-                                className="btn btn-raised btn-sm btn-warning mr-5">
+                                className="btn btn-raised btn-sm btn-secondary mr-5">
                                     Edit Post
                             </Link>
                             <button onClick={this.deleteConfirmed} className="btn btn-raised btn-sm btn-danger">
                                 Delete Post
                             </button>
                         </>
-                    )}
+                    )} */}
                     <Comment postId={post._id} comments={comments.reverse()} updateComments={this.updateComments} />
                 </div>
             </div>
@@ -195,7 +223,7 @@ class SinglePost extends Component {
     render() {
         const { post, loading } = this.state;
         return (
-            <div className="container">
+            <div className="container" style={{paddingBottom:"10px"}} >
                 {(!post || loading) ? (
                     <Loading />
                 ) : (

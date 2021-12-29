@@ -4,6 +4,7 @@ body {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0 0 15px 3px #0003;
+
 }
 .profile-header{
   width: 60%;
@@ -15,7 +16,7 @@ body {
   margin-top: 10px;
 }
 .profile-button{
-  display: flex;
+  display: flex;  
   margin-left: 0px;
 }
 .navbar-collapse.in {

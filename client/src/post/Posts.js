@@ -62,18 +62,20 @@ class Posts extends Component {
                         const posterId = post.postedBy ? post.postedBy._id : "";
                         const posterName = post.postedBy ? post.postedBy.name : " Unknown";
                         return (
-                            <div key={i} className="card col-md-12 mb-5" style={{ padding: "0" }} >
+                            <div key={i} className="card col-md-12 mb-5" style={{ padding: "0", borderRadius:"20px"}} >
                                 <div className="card-header">
-                                    <img
-                                        className="mb-1 mr-2"
-                                        style={{ height: "40px", width: "40px", borderRadius: "50%" }}
-                                        src={`${process.env.REACT_APP_API_URL}/user/photo/${posterId}`}
-                                        onError={i => (i.target.src = DefaultProfile)}
-                                        alt={posterName}
-                                    />
-                                    <Link to={`/user/${posterId}`} style={{ fontSize: "24px" }}>
-                                        {posterName}
-                                    </Link>
+                                    <div>
+                                        <img
+                                            className="mb-1 mr-2"
+                                            style={{ height: "40px", width: "40px", borderRadius: "50%" }}
+                                            src={`${process.env.REACT_APP_API_URL}/user/photo/${posterId}`}
+                                            onError={i => (i.target.src = DefaultProfile)}
+                                            alt={posterName}
+                                        />
+                                        <Link to={`/user/${posterId}`} style={{ fontSize: "24px" }}>
+                                            {posterName}
+                                        </Link>
+                                    </div>
                                     <p
                                         style={{ marginBottom: "0" }}
                                         className="pull-right mt-2"
@@ -99,18 +101,14 @@ class Posts extends Component {
                                 <div className="card-body">
                                     <h5 className="card-title">{post.title}</h5>
                                     <p className="card-text">{post.body}</p>
-                                    <Link
-                                        style={{
-                                            background: "#56ccf2",
-                                            background: "-webkit-linear-gradient(to left, #56ccf2, #2f80ed)",
-                                            background: "linear-gradient(to left, #56ccf2, #2f80ed)",
-                                            borderRadius: "20px",
-                                            padding: "10px"
+                                    <Link style={{
+
                                         }}
                                         to={`/post/${post._id}`}
-                                        className="btn btn-raised btn-sm btn-primary">
+                                        className="a" >
                                         Read More
-                                </Link>
+                                        
+                                    </Link>
                                 </div>
 
                             </div>

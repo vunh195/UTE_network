@@ -134,7 +134,7 @@ class Comment extends Component {
                         Leave a comment <span className="pull-right">{comments.length} comments</span>
                     </h4>
                     <div className="panel-body">
-                        <form onSubmit={this.addComment}>
+                        <form onSubmit={this.addComment} style={{margin:"0px"}}> 
                             <div className="input-group">
                                 <input
                                     className="form-control"
@@ -146,8 +146,11 @@ class Comment extends Component {
                                 <div>
                                     <button type="button" onClick={() => this.setState({ showPicker: !showPicker })} className="btn btn-sm btn-primary"><i style={{fontSize: "20px"}} className="far fa-smile"></i></button>
                                 </div>
+                                <button type="submit" className="btn btn-sm btn-primary">
+                                    <i class="fas fa-paper-plane" style={{fontSize:'18px'}}></i>
+                                </button>  
                             </div>
-                            <button type="submit" className="btn btn-raised btn-sm btn-info pull-right mt-3 mb-3">Add comment</button>                
+               
                         </form>
                         {showPicker ? <Picker onEmojiClick={this.onEmojiClick} /> : ""}
                         <div className="alert alert-danger mt-5" style={{ display: error ? "" : "none" }}>
@@ -186,7 +189,7 @@ class Comment extends Component {
                                             </span>
                                         </span>
                                     <Link to={`/user/${comment.postedBy._id}`} >
-                                        <strong className="text-success">{comment.postedBy.name}</strong>
+                                        <strong className="text">{comment.postedBy.name}</strong>
                                     </Link>
                                         <p>
                                             {comment.text}

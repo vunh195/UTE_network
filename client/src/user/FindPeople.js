@@ -56,7 +56,7 @@ class FindPeople extends Component {
     };
 
     renderUsers = (users) => (
-        <div className="row" style={{margin:'0', padding:'0', display:'flex', justifyContent:'center'}}>
+        <div className="row" style={{display:"flex", justifyContent:"center"}}>
             {users.map((user, i) => (
                 <div key={i} className="card col-md-3" style={{ padding: "0", margin: "15px"}} >
                     <img 
