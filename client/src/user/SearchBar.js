@@ -30,7 +30,7 @@ class SearchBar extends Component {
   changedHandler = (event) => {
     const searchedWord = event.target.value;
     const result = this.state.users.filter((user) => {
-      return user.name.includes(searchedWord);
+      return user.name.toLowerCase().includes(searchedWord);
     });
     console.log(result);
     this.setState({
