@@ -1,0 +1,107 @@
+.rankContainer {
+  width: 400px;
+  height: 350px;
+  background-color: cadetblue;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+
+  background-image: linear-gradient(
+    95.2deg,
+    rgb(136, 243, 218) 26.8%,
+    rgb(156, 223, 253) 64%
+  );
+  /* background-color: white; */
+
+  position: relative;
+  /* -webkit-box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.49); */
+}
+
+.st {
+  width: 100%;
+  height: 100px;
+  color: rgb(255, 255, 126);
+  font-weight: bolder;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  border-radius: 20px;
+
+  padding: 10px;
+  -webkit-box-shadow: 0px 19px 16px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 19px 16px -4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.nd {
+  position: absolute;
+  top: 120px;
+  width: 90%;
+  height: 80px;
+  color: rgb(221, 255, 255);
+  font-weight: bolder;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  -webkit-box-shadow: 0px 19px 10px -9px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 19px 10px -9px rgba(0, 0, 0, 0.3);
+  background-color: rgb(92, 194, 241);
+}
+.th {
+  position: absolute;
+  top: 215px;
+  height: 80px;
+  width: 80%;
+  color: rgb(105, 158, 158);
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(35, 245, 129);
+  -webkit-box-shadow: 0px 19px 17px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 19px 17px -1px rgba(0, 0, 0, 0.2);
+}
+.CardST {
+  color: yellow;
+}
+
+.CardContainer {
+  /* background-color: rgb(245, 210, 210); */
+  padding-left: 10px;
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: auto;
+  font-size: 20px;
+}
+.fas.fa-trophy.cupST {
+  font-size: xxx-large;
+  color: yellow;
+}
+.fas.fa-medal.medalND {
+  font-size: xx-large;
+}
+.fas.fa-medal.medalTH {
+  font-size: x-large;
+}

@@ -62,7 +62,7 @@ const Menu = (props) => (
         height: "35px",
       }}
     >
-      <SearchBar />
+      {isAuthenticated() && <SearchBar />}
     </div>
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">

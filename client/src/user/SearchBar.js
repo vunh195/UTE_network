@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../css/Search.css";
-import { findPeople, follow } from "./apiUser";
+import { findPeople } from "./apiUser";
 import { isAuthenticated } from "../auth/index";
 import { list } from "../post/apiPost";
 import { Link } from "react-router-dom";
@@ -24,15 +24,13 @@ class SearchBar extends Component {
       if (data.error) {
         console.log(data.error);
       } else {
-        console.log(data);
         this.setState({ users: data });
       }
     });
-    list().then((data) => {
+    list(0).then((data) => {
       if (data.error) {
         console.log(data.error);
       } else {
-        console.log(data);
         this.setState({
           posts: data,
         });
@@ -43,10 +41,10 @@ class SearchBar extends Component {
   changedHandler = (event) => {
     const searchedWord = event.target.value;
     const result = this.state.users.filter((user) => {
-      return user.name.toLowerCase().includes(searchedWord);
+      return user.name.toLowerCase().includes(searchedWord.toLowerCase());
     });
     const result2 = this.state.posts.filter((post) => {
-      return post.title.toLowerCase().includes(searchedWord);
+      return post.title.toLowerCase().includes(searchedWord.toLowerCase());
     });
     console.log(result2);
     if (searchedWord === "") {
