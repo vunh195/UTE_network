@@ -250,14 +250,11 @@ class Chat extends Component {
                                                         <button type="button" onClick={() => this.setState({ showPicker: !showPicker })} className="btn btn-sm btn-primary">
                                                             <i style={{fontSize: "20px"}} className="far fa-smile"></i>
                                                         </button>
+                                                        <button type="submit" className="btn btn-raised-secondary btn-primary pull-right">
+                                                            <i class="fas fa-paper-plane"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
-                                                <button
-                                                    type="submit"
-                                                    className="btn btn-raised btn-primary pull-right"
-                                                >
-                                                    Send
-                                                </button>
                                             </form>
                                             {showPicker ? <Picker onEmojiClick={this.onEmojiClick} /> : ""}
                                         </div>

@@ -1,7 +1,8 @@
 fnsdjfnj
 
-asasdsadfa-stack
+abc-stack
 
 git add .
 git commit -m "---"
 git push origin dev
+git pull 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { follow, unfollow } from './apiUser';
+import "../css/FollowProfileButton.css";
 
 class FollowProfileButton extends Component{
 
@@ -16,9 +17,13 @@ class FollowProfileButton extends Component{
             <>
                 { !this.props.following ? 
                     (
-                        <button onClick={this.followClick} className="btn btn-sm btn-info btn-raised">Follow</button>
+                        <button onClick={this.followClick} className="follow-button btn-sm btn-not-follow">
+                            <i class="fas fa-user-plus"></i>
+                        </button>
                     ) : (
-                        <button onClick={this.unfollowClick} className="btn btn-sm btn-raised btn-danger">UnFollow</button>
+                        <button onClick={this.unfollowClick} className="follow-button btn-sm btn-followed">
+                            <i class="fas fa-user-check"></i>
+                        </button>
                     )
                 } 
             </>

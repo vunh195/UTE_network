@@ -27,7 +27,7 @@ body {
 /*------------------------------------------------*/
 .user-profile {
   padding-bottom: 30px;
-  margin-top: 20px;
+  margin-top:20px;
 }
 
 .profile-header-background {
@@ -82,10 +82,10 @@ body {
   padding: 30px 0;
   background-color: transparent;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1280px) {
   .profile-info-right {
     position: relative;
-    top: -70px;
+    bottom: 10px;
   }
 }
 
@@ -138,6 +138,26 @@ body {
   content: '\f129';
 }
 
+/* message button*/
+.Message-button {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #000;
+  padding: 5px 30px;
+  font-size: 15px;
+}
+
+.btn-message {
+  border-color: #c4c2c2;
+  color: #000;
+}
+
+.btn-message:hover {
+  border-color: #818181;
+  background-color: #818181;
+  color: #fff;
+}
 
 /* list icons */
 .list-icons-demo li {

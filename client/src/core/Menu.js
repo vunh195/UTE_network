@@ -24,46 +24,41 @@ const Menu = (props) => (
       backgroundColor: "rgb(27, 145, 223)",
     }}
   >
-    <div className="navbar-brand">
-      <img
-        src="https://youth.hcmute.edu.vn/assets/img/logo/logo_UTE_HSV_DTN.svg"
-        alt=""
-      ></img>
-      <a
-        style={{
-          color: "#3E4551",
-          fontFamily: "Candara",
-          fontWeight: "bold",
-          marginLeft: 10,
-          color: "white",
-        }}
-        href="/"
-      >
-        myHCMUTE
-      </a>
+    <div className="navbar-search">
+      <div className="navbar-brand">
+        <img
+          src="https://youth.hcmute.edu.vn/assets/img/logo/logo_UTE_HSV_DTN.svg"
+          alt=""
+        ></img>
+        <a
+          style={{
+            color: "#3E4551",
+            fontFamily: "Candara",
+            fontWeight: "bold",
+            marginLeft: 10,
+            color: "white",
+          }}
+          href="/"
+        >
+          myHCMUTE
+        </a>
+      </div>
+
+      <div className="searchContainer">
+          {isAuthenticated() && <SearchBar /> }
+      </div>
     </div>
-    <button
-      className="navbar-toggler"
+
+    <button className="navbar-toggler"
       type="button"
       data-toggle="collapse"
       data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+      aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div
-      className="searchContainer"
-      style={{
-        position: "relative",
-        left: "300px",
-        width: "330px",
-        height: "35px",
-      }}
-    >
-      {isAuthenticated() && <SearchBar />}
-    </div>
+
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item ">
