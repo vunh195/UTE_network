@@ -1,22 +1,22 @@
 body {
-    background-image: url('http://demo.thedevelovers.com/dashboard/queenadmin-1.2/assets/img/gray_jean.png?1353438653');
-    background-repeat: repeat;
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 0 0 15px 3px #0003;
-
+  background-image: url("http://demo.thedevelovers.com/dashboard/queenadmin-1.2/assets/img/gray_jean.png?1353438653");
+  background-repeat: repeat;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 3px #0003;
+  height: 100%;
 }
-.profile-header{
+.profile-header {
   width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.action-buttons{
+.action-buttons {
   margin-top: 10px;
 }
-.profile-button{
-  display: flex;  
+.profile-button {
+  display: flex;
   margin-left: 0px;
 }
 .navbar-collapse.in {
@@ -131,13 +131,12 @@ body {
   display: none;
 }
 .btn-toggle-following:hover:after {
-  content: 'Unfollow';
+  content: "Unfollow";
   display: inline;
 }
 .btn-toggle-following:hover i:before {
-  content: '\f129';
+  content: "\f129";
 }
-
 
 /* list icons */
 .list-icons-demo li {
@@ -224,7 +223,6 @@ body {
   margin-bottom: 15px;
 }
 
-
 .nav-tabs > li > a {
   -moz-border-radius-topleft: 2px;
   -webkit-border-top-left-radius: 2px;
@@ -233,7 +231,9 @@ body {
   -webkit-border-top-right-radius: 2px;
   border-top-right-radius: 2px;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
   cursor: pointer;
 }
 
@@ -242,7 +242,9 @@ body {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
   background-color: #1688ae;
 }
 
@@ -268,7 +270,8 @@ body {
   border-color: #ccc;
   border-bottom: transparent;
 }
-.nav.nav-tabs-custom-colored > li > a:hover, .nav.nav-tabs-custom-colored > li > a:focus {
+.nav.nav-tabs-custom-colored > li > a:hover,
+.nav.nav-tabs-custom-colored > li > a:focus {
   background-color: #1688ae;
 }
 
@@ -290,11 +293,14 @@ body {
   color: #696565;
   margin-right: 0;
 }
-.nav-tabs.nav-tabs-custom-colored > li > a:hover, .nav-tabs.nav-tabs-custom-colored > li > a:focus {
+.nav-tabs.nav-tabs-custom-colored > li > a:hover,
+.nav-tabs.nav-tabs-custom-colored > li > a:focus {
   color: #fff;
   border-color: #1688ae;
 }
-.nav-tabs.nav-tabs-custom-colored > li.active > a, .nav-tabs.nav-tabs-custom-colored > li.active > a:hover, .nav-tabs.nav-tabs-custom-colored > li.active > a:focus {
+.nav-tabs.nav-tabs-custom-colored > li.active > a,
+.nav-tabs.nav-tabs-custom-colored > li.active > a:hover,
+.nav-tabs.nav-tabs-custom-colored > li.active > a:focus {
   color: #fff;
   background-color: #1688ae;
   border-color: #1688ae;
@@ -315,11 +321,14 @@ body {
   border-top: 4px solid transparent;
   color: #696565;
 }
-.nav-pills-custom-minimal > li > a:hover, .nav-pills-custom-minimal > li > a:focus {
+.nav-pills-custom-minimal > li > a:hover,
+.nav-pills-custom-minimal > li > a:focus {
   background-color: transparent;
   color: #4f4c4c;
 }
-.nav-pills-custom-minimal > li.active > a, .nav-pills-custom-minimal > li.active > a:hover, .nav-pills-custom-minimal > li.active > a:focus {
+.nav-pills-custom-minimal > li.active > a,
+.nav-pills-custom-minimal > li.active > a:hover,
+.nav-pills-custom-minimal > li.active > a:focus {
   background-color: transparent;
   border-top-color: #94c632;
   color: #696565;
@@ -336,10 +345,11 @@ body {
   border-top: none;
   border-bottom: 4px solid transparent;
 }
-.nav-pills-custom-minimal.custom-minimal-bottom > li.active > a, .nav-pills-custom-minimal.custom-minimal-bottom > li.active > a:hover, .nav-pills-custom-minimal.custom-minimal-bottom > li.active > a:focus {
+.nav-pills-custom-minimal.custom-minimal-bottom > li.active > a,
+.nav-pills-custom-minimal.custom-minimal-bottom > li.active > a:hover,
+.nav-pills-custom-minimal.custom-minimal-bottom > li.active > a:focus {
   border-bottom-color: #94c632;
 }
-
 
 /*===========================================*/
 /*Image hover Posts*/
@@ -445,13 +455,13 @@ figure.snip1205.hover i {
   transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.nav-tabs .nav-item a.active{
-  border-bottom: .214rem solid transparent;
+.nav-tabs .nav-item a.active {
+  border-bottom: 0.214rem solid transparent;
   border-image: linear-gradient(to left, #56ccf2, #2f80ed);
   border-image-slice: 1;
 }
 
-.nav-tabs .nav-item a{
+.nav-tabs .nav-item a {
   font-weight: 200;
   font-size: medium;
   padding: 20px;
@@ -467,7 +477,7 @@ figure.snip1205.hover i {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 120px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   text-align: center;
   right: 0;
@@ -494,10 +504,16 @@ figure.snip1205.hover i {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: whitesmoke;}
+.dropdown:hover .dropbtn {
+  background-color: whitesmoke;
+}

@@ -17,6 +17,7 @@ import ForgotPassword from "./user/ForgotPassword";
 import ResetPassword from "./user/ResetPassword";
 import Chat from "./user/Chat";
 import ChatDef from "./user/ChatDef";
+import CreatePost from "./post/CreatPost";
 
 const MainRouter = () => (
   <div>
@@ -29,7 +30,7 @@ const MainRouter = () => (
         path="/reset-password/:resetPasswordToken"
         component={ResetPassword}
       />
-      <PrivateRoute exact path="/post/create" component={NewPost} />
+      <PrivateRoute exact path="/post/create" component={CreatePost} />
       <Route exact path="/post/:postId" component={SinglePost} />
       <PrivateRoute exact path="/post/edit/:postId" component={EditPost} />
       <Route exact path="/users" component={Users} />
