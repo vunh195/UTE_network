@@ -2,6 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 import SearchBar from "../user/SearchBar";
+import DefaultProfile from "../images/avatar.jpg";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -10,6 +11,11 @@ const isActive = (history, path) => {
     return { color: "#3E4551" };
   }
 };
+const photoUrl = isAuthenticated().user._id
+  ? `${process.env.REACT_APP_API_URL}/user/photo/${
+      isAuthenticated().user._id
+    }?${new Date().getTime()}`
+  : DefaultProfile;
 
 const Menu = (props) => (
   <nav
@@ -18,10 +24,11 @@ const Menu = (props) => (
       background: "#ffff",
       paddingTop: "15px",
       paddingBottom: "0",
-      marginBottom: "50px",
+      marginBottom: "20px",
       position: "sticky",
       top: "0",
       backgroundColor: "rgb(27, 145, 223)",
+      // display: "flex",
     }}
   >
     <div className="navbar-brand">
@@ -53,19 +60,23 @@ const Menu = (props) => (
     >
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div
-      className="searchContainer"
-      style={{
-        position: "relative",
-        left: "300px",
-        width: "330px",
-        height: "35px",
-      }}
-    >
-      {isAuthenticated() && <SearchBar />}
-    </div>
+
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          {" "}
+          <div
+            className="searchContainer"
+            style={{
+              position: "relative",
+              // left: "300px",
+              width: "330px",
+              height: "35px",
+            }}
+          >
+            {isAuthenticated() && <SearchBar />}
+          </div>
+        </li>
         <li className="nav-item ">
           <Link
             className="nav-link"
@@ -138,9 +149,24 @@ const Menu = (props) => (
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
+                style={{
+                  padding: "5px",
+                  color: "white",
+                  borderRadius: "10px",
+                  // backgroundColor: "white",
+                }}
               >
-                <i className="fas fa-user-cog mr-1"></i>
-                {`${isAuthenticated().user.name}'s profile`}
+                <img
+                  style={{ marginRight: "10px" }}
+                  height="50"
+                  width="50"
+                  src={photoUrl}
+                  alt={isAuthenticated().user.name}
+                  onError={(i) => (i.target.src = DefaultProfile)}
+                  className="avatar img-circle"
+                />
+
+                {`${isAuthenticated().user.name}`}
               </button>
               <div
                 className="dropdown-menu"
