@@ -1,0 +1,21 @@
+.HomeContainer {
+  width: 100%;
+  /* justify-content: center; */
+  padding: 10px;
+}
+.LeftContainer {
+  display: flex;
+}
+
+.ranklist {
+  flex: 1;
+}
+.postlist {
+  flex: 10;
+}
+.newPostContainer {
+  height: 300px;
+  width: 69%;
+  padding-left: 45px;
+  padding-bottom: 20px;
+}

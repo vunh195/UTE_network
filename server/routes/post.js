@@ -1,35 +1,16 @@
-const express = require("express");
+const express = require('express')
 
-const { requireSignin } = require("../controllers/auth");
-const {
-  getPosts,
-  createPost,
-  postsByUser,
-  postById,
-  isPoster,
-  deletePost,
-  updatePost,
-  photo,
-  singlePost,
-  like,
-  unlike,
-  comment,
-  uncomment,
-  countPosts,
-  createPostRn,
-  getPostPhotoRn,
-  getAllPostsRn,
-  updatePostRn,
-} = require("../controllers/post");
-const { userById } = require("../controllers/user");
-const { createPostValidator } = require("../validator/index");
+const { requireSignin } = require('../controllers/auth');
+const { getPosts, createPost, postsByUser, postById, isPoster, deletePost, updatePost, photo, singlePost, like, unlike, comment, uncomment, countPosts, createPostRn, getPostPhotoRn, getAllPostsRn, updatePostRn } = require('../controllers/post')
+const { userById } = require('../controllers/user');
+const { createPostValidator } = require('../validator/index');
 
 const router = express.Router();
 
-router.get("/posts", getPosts);
-router.get("/rn/allposts", getAllPostsRn);
+router.get('/posts', getPosts);
+router.get('/rn/allposts', getAllPostsRn);
 
-router.get("/count/posts", countPosts);
+router.get('/count/posts', countPosts);
 
 //like unlike
 router.put("/post/like", requireSignin, like);
@@ -39,12 +20,7 @@ router.put("/post/unlike", requireSignin, unlike);
 router.put("/post/comment", requireSignin, comment);
 router.put("/post/uncomment", requireSignin, uncomment);
 
-router.post(
-  "/post/new/:userId",
-  requireSignin,
-  createPost,
-  createPostValidator
-);
+router.post("/post/new/:userId", requireSignin, createPost, createPostValidator);
 router.post("/rn/post/new/:userId", requireSignin, createPostRn);
 
 // router.get("/post/rn/new", getPostPhotoRn);
@@ -59,6 +35,7 @@ router.delete("/post/:postId", requireSignin, isPoster, deletePost);
 
 //post's photo
 router.get("/post/photo/:postId", photo);
+
 
 // any route containing :userId, this is execute first
 router.param("userId", userById);
