@@ -5,6 +5,7 @@ import { list } from "../post/apiPost";
 import { listAllUsers } from "../user/apiUser";
 import { isAuthenticated } from "../auth";
 import Ranking from "../user/Ranking";
+import NewPost from "../post/NewPost";
 function RankItem(id, likes, name) {
   this.id = id;
   this.likes = likes;
@@ -79,6 +80,11 @@ class Home extends Component {
             <Ranking ranks={rankList} />
           </div>
           <div className="postlist">
+            {isAuthenticated() && (
+              <div className="newPostContainer">
+                <NewPost />
+              </div>
+            )}
             <Posts />
           </div>
         </div>

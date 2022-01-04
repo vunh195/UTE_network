@@ -2,6 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 import SearchBar from "../user/SearchBar";
+import DefaultProfile from "../images/avatar.jpg";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -10,6 +11,11 @@ const isActive = (history, path) => {
     return { color: "#3E4551" };
   }
 };
+const photoUrl = isAuthenticated().user._id
+  ? `${process.env.REACT_APP_API_URL}/user/photo/${
+      isAuthenticated().user._id
+    }?${new Date().getTime()}`
+  : DefaultProfile;
 
 const Menu = (props) => (
   <nav
@@ -18,10 +24,11 @@ const Menu = (props) => (
       background: "#ffff",
       paddingTop: "15px",
       paddingBottom: "0",
-      marginBottom: "50px",
+      marginBottom: "10px",
       position: "sticky",
       top: "0",
       backgroundColor: "rgb(27, 145, 223)",
+      // display: "flex",
     }}
   >
     <div className="navbar-search">
@@ -68,8 +75,8 @@ const Menu = (props) => (
             to="/"
             style={{ color: "white" }}
           >
-            <i className="fas fa-home mr-1"></i>
-            Home
+            <i className="fas fa-home mr-1 " style={{ fontSize: "large" }}></i>
+            {/* Home */}
           </Link>
         </li>
         {!isAuthenticated() && (
@@ -110,7 +117,11 @@ const Menu = (props) => (
                 style={isActive(props.history, "/findpeople")}
                 style={{ color: "white" }}
               >
-                <i className="fas fa-users mr-1"></i>Find People
+                <i
+                  className="fas fa-users mr-1"
+                  style={{ fontSize: "large" }}
+                ></i>
+                {/* Find People */}
               </Link>
             </li>
 
@@ -121,7 +132,11 @@ const Menu = (props) => (
                 style={isActive(props.history, "/post/create")}
                 style={{ color: "white" }}
               >
-                <i className="fas fa-plus mr-1"></i>Create Post
+                <i
+                  className="fas fa-plus mr-1"
+                  style={{ fontSize: "large" }}
+                ></i>
+                {/* Create Post */}
               </Link>
             </li>
             <div className="dropdown">
@@ -133,9 +148,24 @@ const Menu = (props) => (
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
+                style={{
+                  padding: "5px",
+                  color: "white",
+                  borderRadius: "10px",
+                  // backgroundColor: "white",
+                }}
               >
-                <i className="fas fa-user-cog mr-1"></i>
-                {`${isAuthenticated().user.name}'s profile`}
+                <img
+                  style={{ marginRight: "10px" }}
+                  height="50"
+                  width="50"
+                  src={photoUrl}
+                  alt={isAuthenticated().user.name}
+                  onError={(i) => (i.target.src = DefaultProfile)}
+                  className="avatar img-circle"
+                />
+
+                {`${isAuthenticated().user.name}`}
               </button>
               <div
                 className="dropdown-menu"

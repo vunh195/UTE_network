@@ -1,3 +1,8 @@
+.RankWrapper {
+  position: sticky;
+  left: 0;
+  top: 100px;
+}
 .rankContainer {
   width: 400px;
   height: 350px;
@@ -65,7 +70,7 @@
   width: 80%;
   color: rgb(105, 158, 158);
   font-weight: bolder;
-  padding: 5px;
+  /* padding: 5px; */
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -80,17 +85,21 @@
 
 .CardContainer {
   /* background-color: rgb(245, 210, 210); */
-  padding-left: 10px;
+  /* padding-left: 10px; */
   width: 80%;
   height: 90%;
   border-radius: 10px;
 
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.text {
+  display: flex;
+  flex-direction: column;
+}
 p {
   margin: auto;
   font-size: 20px;
@@ -98,10 +107,13 @@ p {
 .fas.fa-trophy.cupST {
   font-size: xxx-large;
   color: yellow;
+  margin-left: 30px;
 }
 .fas.fa-medal.medalND {
   font-size: xx-large;
+  margin-left: 30px;
 }
 .fas.fa-medal.medalTH {
   font-size: x-large;
+  margin-left: 30px;
 }

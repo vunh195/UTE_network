@@ -13,8 +13,10 @@ const Card = (rankitem) => {
         style={{ textDecoration: "none" }}
       >
         {/* <p>{rankitem && rankitem.id}</p> */}
-        <p>{rankitem && rankitem.name} </p>
-        <p>{rankitem && rankitem.likes} likes</p>
+        <div className="text">
+          <p>{rankitem && rankitem.name} </p>
+          <p>{rankitem && rankitem.likes} likes</p>
+        </div>
       </Link>
       // </div>
     )
@@ -23,19 +25,22 @@ const Card = (rankitem) => {
 const Ranking = (props) => {
   var lst = props.ranks.slice(0, 3);
   return (
-    <div className="rankContainer">
-      <div className="st">
-        <i class="fas fa-trophy cupST"></i>
-        {Card(lst[0])}
+    <div className="RankWrapper">
+      <div className="rankContainer">
+        <div className="st">
+          <i class="fas fa-trophy cupST"></i>
+          {Card(lst[0])}
+        </div>
+        <div className="nd">
+          <i class="fas fa-medal medalND"></i>
+          {Card(lst[1])}
+        </div>
+        <div className="th">
+          <i class="fas fa-medal medalTH"></i>
+          {Card(lst[2])}
+        </div>
+        {/* <a> {rankItem.likes}</a>{" "} */}
       </div>
-      <div className="nd">
-        <i class="fas fa-medal medalND"></i> {Card(lst[1])}{" "}
-      </div>
-      <div className="th">
-        <i class="fas fa-medal medalTH"></i>
-        {Card(lst[2])}
-      </div>
-      {/* <a> {rankItem.likes}</a>{" "} */}
     </div>
   );
 };
