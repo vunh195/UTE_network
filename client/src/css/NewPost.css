@@ -101,3 +101,18 @@
   color: rgb(236, 149, 164);
   margin: auto;
 }
+.fas.fa-map-marker-alt {
+  margin-left: 10px;
+  font-size: x-large;
+  color: rgb(238, 46, 222);
+}
+.fas.fa-user-plus {
+  margin-left: 10px;
+  color: orange;
+  font-size: x-large;
+}
+.far.fa-smile-beam {
+  margin-left: 10px;
+  color: red;
+  font-size: x-large;
+}
