@@ -24,7 +24,7 @@ const Menu = (props) => (
       background: "#ffff",
       paddingTop: "15px",
       paddingBottom: "0",
-      marginBottom: "20px",
+      marginBottom: "10px",
       position: "sticky",
       top: "0",
       backgroundColor: "rgb(27, 145, 223)",
@@ -49,6 +49,18 @@ const Menu = (props) => (
         myHCMUTE
       </a>
     </div>
+
+    <div
+      className="searchContainer"
+      style={{
+        position: "relative",
+        left: "300px",
+        width: "330px",
+        height: "35px",
+      }}
+    >
+      {isAuthenticated() && <SearchBar />}
+    </div>
     <button
       className="navbar-toggler"
       type="button"
@@ -60,23 +72,8 @@ const Menu = (props) => (
     >
       <span className="navbar-toggler-icon"></span>
     </button>
-
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          {" "}
-          <div
-            className="searchContainer"
-            style={{
-              position: "relative",
-              // left: "300px",
-              width: "330px",
-              height: "35px",
-            }}
-          >
-            {isAuthenticated() && <SearchBar />}
-          </div>
-        </li>
         <li className="nav-item ">
           <Link
             className="nav-link"
@@ -84,8 +81,8 @@ const Menu = (props) => (
             to="/"
             style={{ color: "white" }}
           >
-            <i className="fas fa-home mr-1"></i>
-            Home
+            <i className="fas fa-home mr-1 " style={{ fontSize: "large" }}></i>
+            {/* Home */}
           </Link>
         </li>
         {!isAuthenticated() && (
@@ -126,7 +123,11 @@ const Menu = (props) => (
                 style={isActive(props.history, "/findpeople")}
                 style={{ color: "white" }}
               >
-                <i className="fas fa-users mr-1"></i>Find People
+                <i
+                  className="fas fa-users mr-1"
+                  style={{ fontSize: "large" }}
+                ></i>
+                {/* Find People */}
               </Link>
             </li>
 
@@ -137,7 +138,11 @@ const Menu = (props) => (
                 style={isActive(props.history, "/post/create")}
                 style={{ color: "white" }}
               >
-                <i className="fas fa-plus mr-1"></i>Create Post
+                <i
+                  className="fas fa-plus mr-1"
+                  style={{ fontSize: "large" }}
+                ></i>
+                {/* Create Post */}
               </Link>
             </li>
             <div className="dropdown">
