@@ -155,25 +155,6 @@ class Profile extends Component {
           <div className="col-md-8">
             <div className="profile-info-right">
               <div className="profile-header">
-                <h2 className="mt-2">{user.name}</h2>
-                <div className="setting" ref={this.setting}>
-                  <div class="dropdown">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="dropdown-content">
-                      <a href="#">
-                        <Link
-                          className="btn btn-flat-secondary"
-                          to={`/user/edit/${user._id}`}
-                        >
-                          Edit Profile
-                        </Link>
-                      </a>
-                      <a href="#">
-                        <DeleteUser userId={user._id} />
-                      </a>
-                    </div>
-                  </div>
-                </div>
                 <div className="col-md-8">
                     <div className="profile-info-right">
                         <div className='profile-header'>
@@ -221,10 +202,6 @@ class Profile extends Component {
                         <div className="section">
                             <p>{user.about}</p>
                         </div>
-
-              <div className="section">
-                <p>{user.about}</p>
-              </div>
 
               <Tabs
                 onSelect={(index, label) => console.log(label + " selected")}
