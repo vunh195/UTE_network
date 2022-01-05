@@ -53,7 +53,7 @@ class Posts extends Component {
         loader={<Loading />}
         endMessage={
           <p style={{ textAlign: "center" }}>
-            <b>All posts rendered.. Please refresh to see new posts if any</b>
+            <b>Please refresh to see new posts if any</b>
           </p>
         }
       >
@@ -88,12 +88,14 @@ class Posts extends Component {
                     {posterName}
                   </Link>
                 </div>
-                <p style={{ marginBottom: "0" }} className="pull-right mt-2">
-                  <span className="ml-2">
-                    <i className="far fa-clock"></i>
-                    {" " + timeDifference(new Date(), new Date(post.created))}
-                  </span>
-                </p>
+                <div className="post-time">
+                  <p style={{ marginBottom: "0" }} className="pull-right mt-2">
+                    <span className="ml-2">
+                      <i className="far fa-clock"></i>
+                      {" " + timeDifference(new Date(), new Date(post.created))}
+                    </span>
+                  </p>
+                </div>
               </div>
               <Link to={`/post/${post._id}`}>
                 <img

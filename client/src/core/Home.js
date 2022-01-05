@@ -75,11 +75,11 @@ class Home extends Component {
 
     return (
       <div className="HomeContainer">
-        <div className="LeftContainer">
+        <div className="LeftContainer" >
           <div className="ranklist">
             <Ranking ranks={rankList} />
           </div>
-          <div className="postlist">
+          <div className="postlist" style={{margin:"auto", width:"50%"}}>
             {isAuthenticated() && (
               <div className="newPostContainer">
                 <NewPost />
@@ -88,29 +88,31 @@ class Home extends Component {
             <Posts />
           </div>
         </div>
+        <div>
+          <footer
+            className="page-footer font-small"
+            style={{ background: "#3E4551", position: "sticky", bottom: "0" }}
+          >
+            <div className="container">
+              <p
+                className="text-center"
+                style={{
+                  color: "#fff",
+                  fontSize: "medium",
 
-        <footer
-          className="page-footer font-small"
-          style={{ background: "#3E4551", position: "sticky", bottom: "0" }}
-        >
-          <div className="container">
-            <p
-              className="text-center"
-              style={{
-                color: "#fff",
-                fontSize: "medium",
-
-                padding: "10px",
-              }}
-            >
-              From HCMUTE with love{" "}
-              <i
-                className="fas fa-heart"
-                style={{ color: "red", fontSize: "24px" }}
-              ></i>
-            </p>
-          </div>
-        </footer>
+                  padding: "10px",
+                }}
+              >
+                From HCMUTE with love{" "}
+                <i
+                  className="fas fa-heart"
+                  style={{ color: "red", fontSize: "24px" }}
+                ></i>
+              </p>
+            </div>
+          </footer>
+        </div>
+        
       </div>
     );
   }
