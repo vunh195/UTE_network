@@ -79,7 +79,6 @@ class Home extends Component {
           <div className="ranklist">
             <Ranking ranks={rankList} />
           </div>
-
           <div className="postlist">
             {isAuthenticated() && (
               <div className="newPostContainer">
@@ -88,7 +87,6 @@ class Home extends Component {
             )}
             <Posts />
           </div>
-          
         </div>
         <div>
           <footer

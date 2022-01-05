@@ -76,7 +76,7 @@ const Menu = (props) => (
     </button>
 
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ml-auto" style={{display:"flex"}}>
         <li className="nav-item ">
           <Link
             className="nav-link"
@@ -115,7 +115,7 @@ const Menu = (props) => (
                 to="/signup"
                 style={{ color: "white", marginTop: "10px" }}
               >
-                <i className="fas fa-user-plus mr-1"></i>Sign Up
+                <i class="fas fa-plus"style={{marginRight:"5px"}}></i>Sign Up
               </Link>
             </li>
           </>

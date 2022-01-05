@@ -51,11 +51,7 @@ class Posts extends Component {
         next={this.fetchData}
         hasMore={this.state.hasMore}
         loader={<Loading />}
-        endMessage={
-          <p style={{ textAlign: "center" }}>
-            <b>Please refresh to see new posts if any</b>
-          </p>
-        }
+        
       >
         {posts.map((post, i) => {
           const posterId = post.postedBy ? post.postedBy._id : "";

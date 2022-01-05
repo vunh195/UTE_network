@@ -128,7 +128,7 @@ class NewPost extends Component {
           placeholder={"Say something....." + user.name}
         />
       </div>
-      <div className="body" style={{border:"2px solid #0001" ,borderRadius:"5px"}}>
+      <div className="body">
         {/* <label className="text-muted">Body</label> */}
         <textarea
           style={{ resize: "none" }}
@@ -159,9 +159,7 @@ class NewPost extends Component {
         <i class=" fas fa-map-marker-alt"></i>
         <i class="fas fa-user-plus"></i>
         <i class="far fa-smile-beam"></i>
-        <button onClick={this.clickSubmit} className="submit">
-          <i class="fas fa-paper-plane"></i>
-        </button>
+        <button onClick={this.clickSubmit} className="submit">Post</button>
       </div>
       {/* </div> */}
     </form>

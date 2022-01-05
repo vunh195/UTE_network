@@ -60,7 +60,7 @@ class FindPeople extends Component {
         <div
           key={i}
           className="card col-md-3"
-          style={{ padding: "0", margin: "15px" }}
+          style={{ margin: "15px",borderRadius:"5px" }}
         >
           <img
             style={{}}

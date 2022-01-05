@@ -10,8 +10,6 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
-  margin: auto;
-
   /* padding: 60px; */
 }
 .FormContainer {
@@ -36,6 +34,8 @@
   align-items: center;
   height: 80%;
   margin-bottom: 10px;
+  border:2px solid #0001 ;
+  border-radius: 5px;
 }
 .inputTitle {
   /* height: 100%; */
@@ -74,10 +74,12 @@
   right: 0;
   cursor: pointer;
   border-style: none;
+  border: 2px solid #0001;
   border-radius: 10px;
   height: 50px;
-  width: 50px;
-  background-color: white;
+  width: 80px;
+  background-color: #ffffff;
+  color: #000000;
   -webkit-box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
   box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
 }
@@ -93,6 +95,7 @@
   cursor: pointer;
   -webkit-box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
   box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
+  border: 2px solid #0001;
 }
 .far.fa-image {
   font-size: xx-large;
