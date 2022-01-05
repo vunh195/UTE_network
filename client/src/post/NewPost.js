@@ -181,7 +181,7 @@ class NewPost extends Component {
 
     return (
       <div
-        className="containerNewPost"
+        className="containerNewPost" style={{boxShadow:"0 0 15px 3px #0003"}}
         // style={{ marginbottom: "20", height: "800px" }}
       >
         {/* <h2 className="mt-5 mb-5">Create a new post</h2> */}
