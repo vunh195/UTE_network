@@ -31,7 +31,7 @@ const Menu = (props) => (
       // display: "flex",
     }}
   >
-    <div className="navbar-search">
+    <div className="navbar-search" style={{ width: "60%" }}>
       <div className="navbar-brand">
         <img
           src="https://youth.hcmute.edu.vn/assets/img/logo/logo_UTE_HSV_DTN.svg"
@@ -51,7 +51,10 @@ const Menu = (props) => (
         </a>
       </div>
 
-      <div className="searchContainer">
+      <div
+        className="searchContainer"
+        style={{ width: "60%", marginLeft: "25%" }}
+      >
         {isAuthenticated() && <SearchBar />}
       </div>
     </div>
@@ -77,7 +80,10 @@ const Menu = (props) => (
             to="/"
             style={{ color: "white" }}
           >
-            <i className="fas fa-home mr-1 " style={{ fontSize: "25px", marginTop: "10px" }}></i>
+            <i
+              className="fas fa-home mr-1 "
+              style={{ fontSize: "25px", marginTop: "10px" }}
+            ></i>
             {/* Home */}
           </Link>
         </li>
