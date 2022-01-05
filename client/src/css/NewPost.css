@@ -10,6 +10,8 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
+  margin: auto;
+
   /* padding: 60px; */
 }
 .FormContainer {

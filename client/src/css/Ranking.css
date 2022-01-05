@@ -2,10 +2,11 @@
   position: sticky;
   left: 0;
   top: 100px;
+  /*  */
 }
 .rankContainer {
-  width: 400px;
-  height: 350px;
+  width: 100%;
+  height: fit-content;
   background-color: cadetblue;
   padding: 10px;
   display: flex;
@@ -21,14 +22,14 @@
   );
   /* background-color: white; */
 
-  position: relative;
+  /* position: relative; */
   /* -webkit-box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.49);
   box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.49); */
 }
 
 .st {
   width: 100%;
-  height: 100px;
+  height: auto;
   color: rgb(255, 255, 126);
   font-weight: bolder;
   background-color: lightcoral;
@@ -43,15 +44,15 @@
   padding: 10px;
   -webkit-box-shadow: 0px 19px 16px -4px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 19px 16px -4px rgba(0, 0, 0, 0.5);
-  position: absolute;
+  margin-bottom: 10px;
   top: 0px;
   left: 0px;
 }
 .nd {
-  position: absolute;
-  top: 120px;
+  /* position: absolute;
+  top: 60px; */
   width: 90%;
-  height: 80px;
+  height: auto;
   color: rgb(221, 255, 255);
   font-weight: bolder;
   border-radius: 10px;
@@ -62,11 +63,12 @@
   -webkit-box-shadow: 0px 19px 10px -9px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 19px 10px -9px rgba(0, 0, 0, 0.3);
   background-color: rgb(92, 194, 241);
+  margin-bottom: 10px;
 }
 .th {
-  position: absolute;
-  top: 215px;
-  height: 80px;
+  /* position: absolute;
+  top: 115px; */
+  height: auto;
   width: 80%;
   color: rgb(105, 158, 158);
   font-weight: bolder;
@@ -78,6 +80,7 @@
   background-color: rgb(35, 245, 129);
   -webkit-box-shadow: 0px 19px 17px -1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 19px 17px -1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 .CardST {
   color: yellow;
@@ -86,7 +89,7 @@
 .CardContainer {
   /* background-color: rgb(245, 210, 210); */
   /* padding-left: 10px; */
-  width: 80%;
+  width: 90%;
   height: 90%;
   border-radius: 10px;
 
@@ -102,18 +105,42 @@
 }
 p {
   margin: auto;
-  font-size: 20px;
+  font-size: 15px;
 }
+@media screen and (max-width: 1300px) {
+  p {
+    font-size: 10px;
+  }
+}
+
 .fas.fa-trophy.cupST {
   font-size: xxx-large;
   color: yellow;
-  margin-left: 30px;
+  margin-left: 10px;
+  /* font-size: auto; */
+}
+@media screen and (max-width: 1300px) {
+  .fas.fa-trophy.cupST {
+    font-size: x-large;
+  }
 }
 .fas.fa-medal.medalND {
   font-size: xx-large;
-  margin-left: 30px;
+  margin-left: 10px;
+  /* font-size: auto; */
+}
+@media screen and (max-width: 1300px) {
+  .fas.fa-medal.medalND {
+    font-size: large;
+  }
 }
 .fas.fa-medal.medalTH {
   font-size: x-large;
-  margin-left: 30px;
+  margin-left: 10px;
+  font-size: auto;
+}
+@media screen and (max-width: 1300px) {
+  .fas.fa-medal.medalTH {
+    font-size: medium;
+  }
 }

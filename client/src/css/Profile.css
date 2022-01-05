@@ -9,14 +9,28 @@ body {
 .profile-header {
   width: 60%;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
 }
+.fas.fa-user-plus {
+  font-size: 20px;
+}
+.header {
+  flex: 10;
+  width: fit-content;
+  /* font-size: 10px; */
+}
 .action-buttons {
+  /* flex: 1; */
+
   margin-top: 10px;
+  margin-left: 100px;
 }
 .profile-button {
+  /* flex: 1; */
   display: flex;
+  align-items: center;
   margin-left: 0px;
 }
 .navbar-collapse.in {
@@ -27,7 +41,7 @@ body {
 /*------------------------------------------------*/
 .user-profile {
   padding-bottom: 30px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .profile-header-background {

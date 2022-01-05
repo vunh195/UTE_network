@@ -5,9 +5,10 @@
 }
 .searchContainer {
   /* position: relative; */
-  width: 170px;
+  width: 100%;
   height: 30px;
-  margin-left: 30%; 
+
+  /* background-color: black; */
 }
 .search {
   padding-left: 10px;
