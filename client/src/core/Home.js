@@ -75,11 +75,11 @@ class Home extends Component {
 
     return (
       <div className="HomeContainer">
-        <div className="LeftContainer" >
+        <div className="LeftContainer">
           <div className="ranklist">
             <Ranking ranks={rankList} />
           </div>
-          <div className="postlist" style={{margin:"auto", width:"50%"}}>
+          <div className="postlist">
             {isAuthenticated() && (
               <div className="newPostContainer">
                 <NewPost />
@@ -112,7 +112,6 @@ class Home extends Component {
             </div>
           </footer>
         </div>
-        
       </div>
     );
   }

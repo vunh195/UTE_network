@@ -19,7 +19,7 @@
   height: 300px;
   width: 69%;
   padding-bottom: 20px;
-  margin: auto;
+  padding-left: 30px;
 }
 @media only screen and (max-width: 414px) {
   .LeftContainer {
