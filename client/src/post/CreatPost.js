@@ -8,7 +8,7 @@ class CreatePost extends Component {
         className="CreatePostContainer"
         style={{
           width: "70%",
-          height: "500px",
+          height: "900px",
           margin: "auto",
           padding: "80px",
         }}

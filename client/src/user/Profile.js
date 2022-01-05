@@ -303,7 +303,10 @@ class Profile extends Component {
     }
 
     return (
-      <div className="container">
+      <div
+        className="container"
+        style={{ height: "800px", paddingTop: "50px" }}
+      >
         {loading ? <Loading /> : this.renderProfile()}
       </div>
     );
