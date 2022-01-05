@@ -157,9 +157,9 @@ class Profile extends Component {
               <div className="profile-header">
                 <h2 className="header">{user.name}</h2>
                 <div className="action-buttons">
-                  {/* { isAuthenticated().user && isAuthenticated().user._id === user._id ? (
+                  { isAuthenticated().user && isAuthenticated().user._id === user._id ? (
                     <></>
-                  ) : ( */}
+                  ) : (
                     <div className="profile-button">
                       <div
                         // className="col-md-6 col-xs-6"
@@ -179,7 +179,7 @@ class Profile extends Component {
                         />
                       </div>
                     </div>
-                  {/* )} */}
+                  )} 
                 </div>
 
                 { isAuthenticated().user && isAuthenticated().user._id != user._id ? (
