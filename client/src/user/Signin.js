@@ -119,7 +119,7 @@ class Signin extends Component {
                 />
             </div>
 
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Submit</button>
+
         </form>
     )
 
@@ -148,12 +148,19 @@ class Signin extends Component {
                 ) : (
                         ""
                     )}
-                <p>
-                    <Link to="/forgot-password" className="btn btn-raised btn-danger">
-                        {" "}
-                    Forgot Password
-                </Link>
-                </p>
+                <div className='button-signin' style={{display:"flex", justifyContent:"space-between"}}>
+                    <button onClick={this.clickSubmit} className="btn btn-raised " style={{background:"#1B91DF", color:"#ffffff"}}>Submit</button>
+                    <div>
+                        <p>
+                            <Link to="/forgot-password" className="fg-password" style={{color:"#1B91DF"}}>
+                                {" "}
+                            Forgot Password
+                            </Link>
+                        </p>
+                    </div>
+                    
+                </div>
+
             </div>
         );
     }

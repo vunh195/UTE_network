@@ -136,7 +136,7 @@ class Signup extends Component {
                     className="form-control"
                 />
             </div>
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Submit</button>
+            <button onClick={this.clickSubmit} className="btn btn-raised " style={{background:"#1B91DF", color:"#ffffff"}}>Submit</button>
         </form>
     );
 
