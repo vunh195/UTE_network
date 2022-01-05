@@ -28,15 +28,15 @@ const Ranking = (props) => {
     <div className="RankWrapper">
       <div className="rankContainer">
         <div className="st">
-          <i class="fas fa-trophy cupST"></i>
+          <i class=" fas fa-trophy cupST  " id="iconsrank"></i>
           {Card(lst[0])}
         </div>
         <div className="nd">
-          <i class="fas fa-medal medalND"></i>
+          <i class=" fas fa-medal medalND " id="iconsrank"></i>
           {Card(lst[1])}
         </div>
         <div className="th">
-          <i class="fas fa-medal medalTH"></i>
+          <i class="  fas fa-medal medalTH " id="iconsrank"></i>
           {Card(lst[2])}
         </div>
         {/* <a> {rankItem.likes}</a>{" "} */}

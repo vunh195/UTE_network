@@ -8,7 +8,9 @@
 }
 
 .ranklist {
-  flex: 1;
+  flex: 3;
+
+  /* height: 1000px; */
 }
 .postlist {
   flex: 10;
@@ -18,4 +20,46 @@
   width: 69%;
   padding-left: 45px;
   padding-bottom: 20px;
+}
+@media only screen and (max-width: 414px) {
+  .LeftContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ranklist {
+    margin-bottom: 10px;
+  }
+  .postlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .newPostContainer {
+    /* margin-left: 45px; */
+    margin: auto;
+    padding-left: 0;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  .LeftContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ranklist {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .newPostContainer {
+    /* margin-left: 45px; */
+    margin: auto;
+    width: 75%;
+    padding-left: 0;
+  }
+  .postlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

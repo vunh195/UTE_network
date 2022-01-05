@@ -6,7 +6,7 @@ import Loading from "../loading/Loading";
 import DefaultProfile from "../images/avatar.jpg";
 import { timeDifference } from "./timeDifference";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import "../css/Posts.css";
 class Posts extends Component {
   constructor() {
     super();
@@ -46,6 +46,7 @@ class Posts extends Component {
   renderPosts = (posts) => {
     return (
       <InfiniteScroll
+        className="Scroll"
         dataLength={posts.length}
         next={this.fetchData}
         hasMore={this.state.hasMore}
@@ -62,12 +63,13 @@ class Posts extends Component {
           return (
             <div
               key={i}
-              className="card col-md-8 mb-4"
-              style={{
-                padding: "0px",
-                borderRadius: "20px",
-                marginLeft: "30px",
-              }}
+              className="card "
+              // col-md-8 mb-4"
+              // style={{
+              //   padding: "0px",
+              //   borderRadius: "20px",
+              //   marginLeft: "30px",
+              // }}
             >
               <div className="card-header">
                 <div>
