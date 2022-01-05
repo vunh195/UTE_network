@@ -11,9 +11,9 @@ const isActive = (history, path) => {
     return { color: "#3E4551" };
   }
 };
-const photoUrl = isAuthenticated().user._id
+const photoUrl = isAuthenticated().user?._id
   ? `${process.env.REACT_APP_API_URL}/user/photo/${
-      isAuthenticated().user._id
+      isAuthenticated().user?._id
     }?${new Date().getTime()}`
   : DefaultProfile;
 
@@ -52,17 +52,19 @@ const Menu = (props) => (
       </div>
 
       <div className="searchContainer">
-          {isAuthenticated() && <SearchBar /> }
+        {isAuthenticated() && <SearchBar />}
       </div>
     </div>
 
-    <button className="navbar-toggler"
+    <button
+      className="navbar-toggler"
       type="button"
       data-toggle="collapse"
       data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
-      aria-label="Toggle navigation">
+      aria-label="Toggle navigation"
+    >
       <span className="navbar-toggler-icon"></span>
     </button>
 

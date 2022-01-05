@@ -25,7 +25,7 @@ class Posts extends Component {
     }
     const data = await list(this.state.skip);
 
-    if (data.error) {
+    if (data?.error) {
       console.log(data.error);
     } else {
       var joinedArray = this.state.posts.concat(data);
@@ -35,7 +35,7 @@ class Posts extends Component {
 
   async componentDidMount() {
     const count = await countTotalPosts();
-    this.setState({ count: count.data });
+    this.setState({ count: count?.data });
     this.fetchData();
   }
 
