@@ -155,9 +155,6 @@ class Profile extends Component {
           <div className="col-md-8">
             <div className="profile-info-right">
               <div className="profile-header">
-                <div className="col-md-8">
-                    <div className="profile-info-right">
-                        <div className='profile-header'>
                             <h2 className="mt-2" >{user.name}</h2>
                             <div className="action-buttons">
                                 {isAuthenticated().user && isAuthenticated().user._id === user._id ? (
@@ -285,9 +282,6 @@ class Profile extends Component {
               </Tabs>
             </div>
           </div>
-        </div>
-        </div>
-        </div>
         </div>
       </div>
     );

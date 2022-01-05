@@ -1,6 +1,6 @@
 fnsdjfnj
 
-abcxyz-stack
+abc-stack
 
 git pull 
 git add .

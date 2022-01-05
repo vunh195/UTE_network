@@ -77,7 +77,7 @@ const Menu = (props) => (
             to="/"
             style={{ color: "white" }}
           >
-            <i className="fas fa-home mr-1 " style={{ fontSize: "large" }}></i>
+            <i className="fas fa-home mr-1 " style={{ fontSize: "25px", marginTop: "10px" }}></i>
             {/* Home */}
           </Link>
         </li>
@@ -93,7 +93,7 @@ const Menu = (props) => (
                 className="nav-link"
                 style={isActive(props.history, "/signin")}
                 to="/signin"
-                style={{ color: "white" }}
+                style={{ color: "white", marginTop: "10px" }}
               >
                 <i className="fas fa-sign-in-alt mr-1"></i>Sign In
               </Link>
@@ -103,7 +103,7 @@ const Menu = (props) => (
                 className="nav-link"
                 style={isActive(props.history, "/signup")}
                 to="/signup"
-                style={{ color: "white" }}
+                style={{ color: "white", marginTop: "10px" }}
               >
                 <i className="fas fa-user-plus mr-1"></i>Sign Up
               </Link>
@@ -121,7 +121,7 @@ const Menu = (props) => (
               >
                 <i
                   className="fas fa-users mr-1"
-                  style={{ fontSize: "large" }}
+                  style={{ fontSize: "25px", marginTop: "10px" }}
                 ></i>
                 {/* Find People */}
               </Link>
@@ -136,7 +136,7 @@ const Menu = (props) => (
               >
                 <i
                   className="fas fa-plus mr-1"
-                  style={{ fontSize: "large" }}
+                  style={{ fontSize: "25px", marginTop: "10px" }}
                 ></i>
                 {/* Create Post */}
               </Link>
