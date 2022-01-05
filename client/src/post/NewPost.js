@@ -96,7 +96,7 @@ class NewPost extends Component {
   };
 
   newPostForm = (title, body, user, photoUrl) => (
-    <form className="FormContainer">
+    <form className="FormContainer" >
       <div className="title">
         <img
           //   style={{ border: "solid 1px" }}
@@ -128,7 +128,7 @@ class NewPost extends Component {
           placeholder={"Say something....." + user.name}
         />
       </div>
-      <div className="body">
+      <div className="body" style={{border:"2px solid #0001" ,borderRadius:"5px"}}>
         {/* <label className="text-muted">Body</label> */}
         <textarea
           style={{ resize: "none" }}
@@ -181,7 +181,7 @@ class NewPost extends Component {
 
     return (
       <div
-        className="containerNewPost" style={{boxShadow:"0 0 15px 3px #0003"}}
+        className="containerNewPost" style={{boxShadow:"0 0 15px 3px #0001"}}
         // style={{ marginbottom: "20", height: "800px" }}
       >
         {/* <h2 className="mt-5 mb-5">Create a new post</h2> */}

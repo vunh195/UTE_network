@@ -52,7 +52,7 @@ class Posts extends Component {
         loader={<Loading />}
         endMessage={
           <p style={{ textAlign: "center" }}>
-            <b>All posts rendered.. Please refresh to see new posts if any</b>
+            <b>Please refresh to see new posts if any</b>
           </p>
         }
       >
@@ -66,7 +66,8 @@ class Posts extends Component {
               style={{
                 padding: "0px",
                 borderRadius: "20px",
-                marginLeft: "30px",
+                margin: "auto",
+                align:" center",
               }}
             >
               <div className="card-header">
