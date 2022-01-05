@@ -157,9 +157,11 @@ class NewPost extends Component {
           />
         </label>
         <i class=" fas fa-map-marker-alt"></i>
-        <i class="fas fa-user-plus"></i>
+        <i class="fas fa-user-tag"></i>
         <i class="far fa-smile-beam"></i>
-        <button onClick={this.clickSubmit} className="submit">Post</button>
+        <button onClick={this.clickSubmit} className="submit">
+        <i class="fas fa-upload" style={{fontSize:"20px"}}></i>
+        </button>
       </div>
       {/* </div> */}
     </form>

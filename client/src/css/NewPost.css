@@ -34,7 +34,7 @@
   align-items: center;
   height: 80%;
   margin-bottom: 10px;
-  border:2px solid #0001 ;
+  border:2px solid #0001;
   border-radius: 5px;
 }
 .inputTitle {
@@ -74,12 +74,11 @@
   right: 0;
   cursor: pointer;
   border-style: none;
-  border: 2px solid #0001;
   border-radius: 10px;
   height: 50px;
   width: 80px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color:#ffffff ;
+  color: #1B91DF;
   -webkit-box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
   box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
 }
@@ -99,7 +98,7 @@
 }
 .far.fa-image {
   font-size: xx-large;
-  color: chartreuse;
+  color: #58C472;
 }
 .fas.fa-paper-plane {
   font-size: xx-large;
@@ -109,15 +108,15 @@
 .fas.fa-map-marker-alt {
   margin-left: 10px;
   font-size: x-large;
-  color: rgb(238, 46, 222);
+  color: #F5533D;
 }
-.fas.fa-user-plus {
+.fas.fa-user-tag {
   margin-left: 10px;
-  color: orange;
+  color: #1B91DF;
   font-size: x-large;
 }
 .far.fa-smile-beam {
   margin-left: 10px;
-  color: red;
+  color: #F8C03E;
   font-size: x-large;
 }
