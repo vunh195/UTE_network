@@ -157,10 +157,9 @@ class Profile extends Component {
               <div className="profile-header">
                 <h2 className="header">{user.name}</h2>
                 <div className="action-buttons">
-                  {isAuthenticated().user &&
-                  isAuthenticated().user._id === user._id ? (
+                  {/* { isAuthenticated().user && isAuthenticated().user._id === user._id ? (
                     <></>
-                  ) : (
+                  ) : ( */}
                     <div className="profile-button">
                       <div
                         // className="col-md-6 col-xs-6"
@@ -180,9 +179,12 @@ class Profile extends Component {
                         />
                       </div>
                     </div>
-                  )}
+                  {/* )} */}
                 </div>
 
+                { isAuthenticated().user && isAuthenticated().user._id != user._id ? (
+                    <></>
+                  ) : (
                 <div className="setting" ref={this.setting}>
                   <div class="dropdown">
                     <i class="fas fa-ellipsis-h"></i>
@@ -202,6 +204,7 @@ class Profile extends Component {
                     </div>
                   </div>
                 </div>
+                )}
               </div>
 
               <div className="section">
@@ -216,7 +219,7 @@ class Profile extends Component {
                     {posts.map((post, i) => (
                       <div
                         key={i}
-                        style={{ paddingBottom: "15px" }}
+                        style={{ paddingBottom: "50px" }}
                         className="col-md-4"
                       >
                         <Link to={`/post/${post._id}`}>

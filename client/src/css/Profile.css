@@ -7,7 +7,7 @@ body {
   height: 100%;
 }
 .profile-header {
-  width: 80%;
+  width: 100%;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -16,21 +16,33 @@ body {
 .fas.fa-user-plus {
   font-size: 20px;
 }
+
 .header {
-  flex: 10;
+  flex: 10%;
   width: fit-content;
+  padding-left: 1px;
 }
 .action-buttons {
   margin-top: 0;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 .profile-button {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .navbar-collapse.in {
   display: block !important;
+}
+@media screen and (max-width: 899px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .setting {
+    flex-direction: row;
+    display: block;
+  }
 }
 /*------------------------------------------------*/
 /*    Profile Page
@@ -92,6 +104,7 @@ body {
   padding: 30px 0;
   background-color: transparent;
 }
+
 @media screen and (min-width: 1280px) {
   .profile-info-right {
     position: relative;
