@@ -156,6 +156,9 @@ class NewPost extends Component {
             style={{ display: "none" }}
           />
         </label>
+        <i class=" fas fa-map-marker-alt"></i>
+        <i class="fas fa-user-plus"></i>
+        <i class="far fa-smile-beam"></i>
         <button onClick={this.clickSubmit} className="submit">
           <i class="fas fa-paper-plane"></i>
         </button>

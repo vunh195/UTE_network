@@ -155,56 +155,50 @@ class Profile extends Component {
           <div className="col-md-8">
             <div className="profile-info-right">
               <div className="profile-header">
-                <h2 className="mt-2">{user.name}</h2>
-                <div className="setting" ref={this.setting}>
-                  <div class="dropdown">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="dropdown-content">
-                      <a href="#">
-                        <Link
-                          className="btn btn-flat-secondary"
-                          to={`/user/edit/${user._id}`}
-                        >
-                          Edit Profile
-                        </Link>
-                      </a>
-                      <a href="#">
-                        <DeleteUser userId={user._id} />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="action-buttons">
-                {isAuthenticated().user &&
-                isAuthenticated().user._id === user._id ? (
-                  <></>
-                ) : (
-                  <div className="profile-button">
-                    <div className="col-md-6 col-xs-6">
-                      <FollowProfileButton
-                        following={following}
-                        onButtonClick={this.clickFollowButton}
-                      />
-                    </div>
-                    <div
-                      className="col-md-6 col-xs-6"
-                      style={{ marginleft: "0px" }}
-                    >
-                      <Link
-                        className="btn btn-sm btn-raised btn-success ml-3"
-                        to={`/chat/${isAuthenticated().user._id}/${user._id}`}
-                      >
-                        Message
-                      </Link>
-                    </div>
-                  </div>
-                )}
-              </div>
+                            <h2 className="mt-2" >{user.name}</h2>
+                            <div className="action-buttons">
+                                {isAuthenticated().user && isAuthenticated().user._id === user._id ? (
+                                    <>
+                                    
+                                    </>
+                                ): (
+                                    <div className="profile-button">
+                                        <div className="col-md-6 col-xs-6" style={{marginleft:'0px'}}>
+                                            <Link 
+                                                className="Message-button btn-sm btn-message"
+                                                to={`/chat/${isAuthenticated().user._id}/${user._id}`}
+                                            >
+                                                Message
+                                            </Link>
+                                        </div>
+                                        <div className="col-md-6 col-xs-6" >
+                                            <FollowProfileButton following={following} onButtonClick={this.clickFollowButton} />
+                                        </div>
+                                    </div>                                            
+                                )}
+                            </div>
 
-              <div className="section">
-                <p>{user.about}</p>
-              </div>
+                            <div className="setting" ref={this.setting}>
+                                <div class="dropdown">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                    <div class="dropdown-content">
+                                        <a href="#">
+                                            <Link 
+                                                className="btn btn-flat-secondary"
+                                                    to={`/user/edit/${user._id}`}>
+                                                    Edit Profile
+                                            </Link></a>
+                                            <a href="#"> <DeleteUser userId={user._id} />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div className="section">
+                            <p>{user.about}</p>
+                        </div>
 
               <Tabs
                 onSelect={(index, label) => console.log(label + " selected")}

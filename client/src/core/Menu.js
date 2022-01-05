@@ -11,9 +11,9 @@ const isActive = (history, path) => {
     return { color: "#3E4551" };
   }
 };
-const photoUrl = isAuthenticated().user._id
+const photoUrl = isAuthenticated().user?._id
   ? `${process.env.REACT_APP_API_URL}/user/photo/${
-      isAuthenticated().user._id
+      isAuthenticated().user?._id
     }?${new Date().getTime()}`
   : DefaultProfile;
 
@@ -31,36 +31,31 @@ const Menu = (props) => (
       // display: "flex",
     }}
   >
-    <div className="navbar-brand">
-      <img
-        src="https://youth.hcmute.edu.vn/assets/img/logo/logo_UTE_HSV_DTN.svg"
-        alt=""
-      ></img>
-      <a
-        style={{
-          color: "#3E4551",
-          fontFamily: "Candara",
-          fontWeight: "bold",
-          marginLeft: 10,
-          color: "white",
-        }}
-        href="/"
-      >
-        myHCMUTE
-      </a>
+    <div className="navbar-search">
+      <div className="navbar-brand">
+        <img
+          src="https://youth.hcmute.edu.vn/assets/img/logo/logo_UTE_HSV_DTN.svg"
+          alt=""
+        ></img>
+        <a
+          style={{
+            color: "#3E4551",
+            fontFamily: "Candara",
+            fontWeight: "bold",
+            marginLeft: 10,
+            color: "white",
+          }}
+          href="/"
+        >
+          myHCMUTE
+        </a>
+      </div>
+
+      <div className="searchContainer">
+        {isAuthenticated() && <SearchBar />}
+      </div>
     </div>
 
-    <div
-      className="searchContainer"
-      style={{
-        position: "relative",
-        left: "300px",
-        width: "330px",
-        height: "35px",
-      }}
-    >
-      {isAuthenticated() && <SearchBar />}
-    </div>
     <button
       className="navbar-toggler"
       type="button"
@@ -72,6 +67,7 @@ const Menu = (props) => (
     >
       <span className="navbar-toggler-icon"></span>
     </button>
+
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item ">
@@ -81,7 +77,7 @@ const Menu = (props) => (
             to="/"
             style={{ color: "white" }}
           >
-            <i className="fas fa-home mr-1 " style={{ fontSize: "large" }}></i>
+            <i className="fas fa-home mr-1 " style={{ fontSize: "25px", marginTop: "10px" }}></i>
             {/* Home */}
           </Link>
         </li>
@@ -97,7 +93,7 @@ const Menu = (props) => (
                 className="nav-link"
                 style={isActive(props.history, "/signin")}
                 to="/signin"
-                style={{ color: "white" }}
+                style={{ color: "white", marginTop: "10px" }}
               >
                 <i className="fas fa-sign-in-alt mr-1"></i>Sign In
               </Link>
@@ -107,7 +103,7 @@ const Menu = (props) => (
                 className="nav-link"
                 style={isActive(props.history, "/signup")}
                 to="/signup"
-                style={{ color: "white" }}
+                style={{ color: "white", marginTop: "10px" }}
               >
                 <i className="fas fa-user-plus mr-1"></i>Sign Up
               </Link>
@@ -125,7 +121,7 @@ const Menu = (props) => (
               >
                 <i
                   className="fas fa-users mr-1"
-                  style={{ fontSize: "large" }}
+                  style={{ fontSize: "25px", marginTop: "10px" }}
                 ></i>
                 {/* Find People */}
               </Link>
@@ -140,7 +136,7 @@ const Menu = (props) => (
               >
                 <i
                   className="fas fa-plus mr-1"
-                  style={{ fontSize: "large" }}
+                  style={{ fontSize: "25px", marginTop: "10px" }}
                 ></i>
                 {/* Create Post */}
               </Link>

@@ -1,4 +1,3 @@
-import { height } from "@mui/system";
 import React, { Component } from "react";
 import { isAuthenticated } from "../auth/index";
 import NewPost from "./NewPost";

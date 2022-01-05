@@ -1,0 +1,37 @@
+.follow-button {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #000;
+    padding: 2px 30px;
+    font-size: 14px;
+
+}
+
+/* Followed button with gray */
+.btn-followed {
+    border-color: #c4c2c2;
+    color: #000;
+    align-items: center;
+    height: fit-content;
+}
+
+.btn-followed:hover {
+    border-color: #818181;
+    background-color: #818181;
+    color: #fff;
+}
+
+/* Followed button with gray */
+.btn-not-follow {
+    border-color: #c4c2c2;
+    color: #000;
+    align-items: center;
+    height: fit-content;
+}
+
+.btn-not-follow:hover {
+border-color: #818181;
+background-color: #818181;
+color: #fff;
+}

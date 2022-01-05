@@ -26,7 +26,7 @@ class Home extends Component {
 
   async componentDidMount() {
     const allPosts = await list(this.state.skip);
-    if (allPosts.error) {
+    if (allPosts?.error) {
       console.log(allPosts.error);
     } else {
       console.log("list posts in home :", allPosts);
@@ -36,7 +36,7 @@ class Home extends Component {
     }
 
     const allUsers = await listAllUsers();
-    if (allUsers.error) {
+    if (allUsers?.error) {
       console.log(allUsers.error);
     } else {
       console.log("list users in home :", allUsers);

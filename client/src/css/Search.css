@@ -1,8 +1,13 @@
+.navbar-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .searchContainer {
-  /* position: relative;
-  left: 300px; */
-  width: 320px;
-  height: 35px;
+  /* position: relative; */
+  width: 170px;
+  height: 30px;
+  margin-left: 30%; 
 }
 .search {
   padding-left: 10px;
