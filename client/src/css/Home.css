@@ -9,8 +9,6 @@
 
 .ranklist {
   flex: 3;
-
-  /* height: 1000px; */
 }
 .postlist {
   flex: 10;
@@ -21,10 +19,12 @@
   padding-bottom: 20px;
   padding-left: 30px;
 }
+
 @media only screen and (max-width: 414px) {
   .LeftContainer {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
   }
   .ranklist {
     margin-bottom: 10px;
@@ -35,7 +35,6 @@
     flex-direction: column;
   }
   .newPostContainer {
-    /* margin-left: 45px; */
     margin: auto;
     padding-left: 0;
     width: 90%;

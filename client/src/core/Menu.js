@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 import SearchBar from "../user/SearchBar";
 import DefaultProfile from "../images/avatar.jpg";
+import "../css/Home.css";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -53,7 +54,10 @@ const Menu = (props) => (
 
       <div
         className="searchContainer"
-        style={{ width: "60%", marginLeft: "25%" }}
+        style={{ 
+          width: "60%", 
+          marginLeft: "25%"
+        }}
       >
         {isAuthenticated() && <SearchBar />}
       </div>
