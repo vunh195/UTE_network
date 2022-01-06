@@ -121,7 +121,7 @@ class SinglePost extends Component {
         }
         return(
             
-            <div className="card col-md-12 mb-5" style={{ padding: "0",margin:"0", borderRadius:"20px",alignContent:"center"}} >
+            <div className="card col-md-12 mb-5" style={{ padding: "0",margin:"0", borderRadius:"20px",alignContent:"center", width:"auto"}} >
                 <div className="card-header">
                     <div className="header-left">
                         <Link
