@@ -144,7 +144,7 @@ class Signup extends Component {
     render(){
         const { name, email, password, error, open, loading, recaptcha } = this.state;
         return (
-            <div className="container">
+            <div className="container" style={{paddingBottom:"5px"}}>
                 <h2 className="mt-5 mb-5">Signup</h2>
                 <SocialLogin for="signup" />
                 <hr />
