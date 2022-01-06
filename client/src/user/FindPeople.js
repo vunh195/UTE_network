@@ -60,7 +60,7 @@ class FindPeople extends Component {
         <div
           key={i}
           className="card col-md-3"
-          style={{ padding: "0", margin: "15px" }}
+          style={{margin: "15px",}}
         >
           <img
             style={{}}
@@ -77,22 +77,18 @@ class FindPeople extends Component {
           <div className="card-body">
             <Link
               to={`/user/${user._id}`}
-              className="card-link btn btn-raised btn-primary"
+              className="card-link btn btn-raised " style={{borderRadius:"5px", background:"#1B91DF", color:"#ffffff"}}
             >
               View Profile
             </Link>
             <button
               style={{
-                background: "#56ccf2",
-                background:
-                  "-webkit-linear-gradient(to left, #56ccf2, #2f80ed)",
-                background: "linear-gradient(to left, #56ccf2, #2f80ed)",
-                padding: "10px",
+                borderRadius:"10px"
               }}
               onClick={() => this.clickFollow(user, i)}
-              className="btn btn-raised btn-success pull-right"
+              className="btn btn-raised  pull-right"
             >
-              Follow
+              <i class="fas fa-user-plus" style={{color:"#1B91DF"}}></i>
             </button>
           </div>
         </div>

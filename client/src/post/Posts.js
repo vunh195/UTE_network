@@ -6,6 +6,8 @@ import Loading from "../loading/Loading";
 import DefaultProfile from "../images/avatar.jpg";
 import { timeDifference } from "./timeDifference";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { isAuthenticated } from "../auth";
+import NewPost from "./NewPost";
 import "../css/Posts.css";
 class Posts extends Component {
   constructor() {
@@ -51,26 +53,17 @@ class Posts extends Component {
         next={this.fetchData}
         hasMore={this.state.hasMore}
         loader={<Loading />}
-        endMessage={
-          <p style={{ textAlign: "center" }}>
-            <b>Please refresh to see new posts if any</b>
-          </p>
-        }
       >
+        {isAuthenticated() && (
+          <div className="newPostContainer">
+            <NewPost />
+          </div>
+        )}
         {posts.map((post, i) => {
           const posterId = post.postedBy ? post.postedBy._id : "";
           const posterName = post.postedBy ? post.postedBy.name : " Unknown";
           return (
-            <div
-              key={i}
-              className="card "
-              // col-md-8 mb-4"
-              // style={{
-              //   padding: "0px",
-              //   borderRadius: "20px",
-              //   marginLeft: "30px",
-              // }}
-            >
+            <div key={i} className="card ">
               <div className="card-header">
                 <div>
                   <img

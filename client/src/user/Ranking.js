@@ -15,7 +15,7 @@ const Card = (rankitem) => {
         {/* <p>{rankitem && rankitem.id}</p> */}
         <div className="text">
           <p>{rankitem && rankitem.name} </p>
-          <p>{rankitem && rankitem.likes} likes</p>
+          <p style={{fontSize:"12px"}}>{rankitem && rankitem.likes} likes</p>
         </div>
       </Link>
       // </div>
