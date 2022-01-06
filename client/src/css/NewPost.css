@@ -34,7 +34,7 @@
   align-items: center;
   height: 80%;
   margin-bottom: 10px;
-  border:2px solid #0001;
+  border: 2px solid #0001;
   border-radius: 5px;
 }
 .inputTitle {
@@ -77,8 +77,8 @@
   border-radius: 10px;
   height: 50px;
   width: 80px;
-  background-color:#ffffff ;
-  color: #1B91DF;
+  background-color: #ffffff;
+  color: #1b91df;
   -webkit-box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
   box-shadow: -1px 4px 18px 8px rgba(0, 0, 0, 0.05);
 }
@@ -98,25 +98,61 @@
 }
 .far.fa-image {
   font-size: xx-large;
-  color: #58C472;
+  color: #58c472;
 }
-.fas.fa-paper-plane {
-  font-size: xx-large;
-  color: rgb(236, 149, 164);
-  margin: auto;
+.fas.fa-upload {
+  font-size: x-large;
 }
 .fas.fa-map-marker-alt {
   margin-left: 10px;
   font-size: x-large;
-  color: #F5533D;
+  color: #f5533d;
 }
 .fas.fa-user-tag {
   margin-left: 10px;
-  color: #1B91DF;
+  color: #1b91df;
   font-size: x-large;
 }
 .far.fa-smile-beam {
   margin-left: 10px;
-  color: #F8C03E;
+  color: #f8c03e;
   font-size: x-large;
+}
+@media only screen and (max-width: 700px) {
+  .image {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+  }
+
+  .optionImage {
+    padding: 5px;
+    height: 40px;
+  }
+  span {
+    font-size: small;
+  }
+  .far.fa-image {
+    font-size: small;
+  }
+  .fas.fa-map-marker-alt {
+    font-size: small;
+  }
+  .fas.fa-user-tag {
+    font-size: small;
+  }
+  .far.fa-smile-beam {
+    font-size: small;
+  }
+  .submit {
+    width: 60px;
+    height: fit-content;
+    padding: 5px;
+  }
+  .fas.fa-upload {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
 }

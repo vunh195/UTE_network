@@ -80,11 +80,11 @@ class Home extends Component {
             <Ranking ranks={rankList} />
           </div>
           <div className="postlist">
-            {isAuthenticated() && (
+            {/* {isAuthenticated() && (
               <div className="newPostContainer">
                 <NewPost />
               </div>
-            )}
+            )} */}
             <Posts />
           </div>
         </div>
