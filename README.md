@@ -12,5 +12,3 @@ MONGO_URI=mongodb+srv://vu:vu123456@cluster0.q0c8y.mongodb.net/scocial?retryWrit
 PORT=8080
 JWT_SECRET=3j2jj3bj2bk2sfsl
 CLIENT_URL=http://localhost:3000
-
-heroku deploy
