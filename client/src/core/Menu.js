@@ -5,6 +5,7 @@ import SearchBar from "../user/SearchBar";
 import DefaultProfile from "../images/avatar.jpg";
 import "../css/Home.css";
 
+import "../css/Menu.css";
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
     return { borderBottom: "4px solid #ff9900", color: "#3E4551" };
@@ -32,7 +33,7 @@ const Menu = (props) => (
       // display: "flex",
     }}
   >
-    <div className="navbar-search" style={{ width: "60%" }}>
+    <div className="navbar-search" style={{ width: "30%" }}>
       <div className="navbar-brand">
         <img
           src="https://youth.hcmute.edu.vn/assets/img/logo/logo_UTE_HSV_DTN.svg"
@@ -51,17 +52,8 @@ const Menu = (props) => (
           myHCMUTE
         </a>
       </div>
-
-      <div
-        className="searchContainer"
-        style={{ 
-          width: "60%", 
-          marginLeft: "25%"
-        }}
-      >
-        {isAuthenticated() && <SearchBar />}
-      </div>
     </div>
+    <div className="searchContainer">{isAuthenticated() && <SearchBar />}</div>
 
     <button
       className="navbar-toggler"
@@ -76,7 +68,7 @@ const Menu = (props) => (
     </button>
 
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto" style={{display:"flex"}}>
+      <ul className="navbar-nav ml-auto" style={{ display: "flex" }}>
         <li className="nav-item ">
           <Link
             className="nav-link"
@@ -115,7 +107,8 @@ const Menu = (props) => (
                 to="/signup"
                 style={{ color: "white", marginTop: "10px" }}
               >
-                <i class="fas fa-plus"style={{marginRight:"5px"}}></i>Sign Up
+                <i class="fas fa-plus" style={{ marginRight: "5px" }}></i>Sign
+                Up
               </Link>
             </li>
           </>
