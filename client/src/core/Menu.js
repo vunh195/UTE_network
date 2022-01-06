@@ -97,7 +97,7 @@ const Menu = (props) => (
                 to="/signin"
                 style={{ color: "white", marginTop: "10px" }}
               >
-                <i className="fas fa-sign-in-alt mr-1"></i>Sign In
+                <i className="fas fa-sign-in-alt mr-1" ></i>Sign In
               </Link>
             </li>
             <li className="nav-item">
@@ -107,8 +107,8 @@ const Menu = (props) => (
                 to="/signup"
                 style={{ color: "white", marginTop: "10px" }}
               >
-                <i class="fas fa-plus" style={{ marginRight: "5px" }}></i>Sign
-                Up
+                <i class="fas fa-user-plus" style={{ marginRight: "5px" ,fontSize:"15px"}}></i>
+                Sign Up
               </Link>
             </li>
           </>

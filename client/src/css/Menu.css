@@ -4,16 +4,29 @@
 }
 @media only screen and (min-width: 990px) and (max-width: 1100px) {
   .searchContainer {
+    /* width: 20%; */
+
     margin-left: 15%;
+  }
+  #navbarSupportedContent {
+    width: 500px;
   }
 }
 @media only screen and (min-width: 1101px) and (max-width: 1300px) {
   .searchContainer {
+    /* width: 30%; */
     margin-left: 10%;
+  }
+  #navbarSupportedContent {
+    width: 400px;
   }
 }
 @media only screen and (min-width: 1300px) {
   .searchContainer {
     margin-left: 2%;
+    /* width: 40%; */
+  }
+  #navbarSupportedContent {
+    width: 500px;
   }
 }

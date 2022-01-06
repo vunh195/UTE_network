@@ -130,7 +130,7 @@ class Signin extends Component {
             return <Redirect to="/" />
         }
         return (
-            <div className="container">
+            <div className="container" style={{paddingBottom:"20px"}}>
                 <h2 className="mt-5 mb-5">Sign In</h2>
                 <SocialLogin />
                 <hr />
