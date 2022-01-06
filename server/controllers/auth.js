@@ -104,7 +104,7 @@ exports.forgotPassword = (req, res) => {
 
     // email data
     const emailData = {
-      from: "noreply@node-react.com",
+      from: "vu-none_reply@gmail.com",
       to: email,
       subject: "Password Reset Instructions",
       text: `Please use the following link to reset your password: ${process.env.CLIENT_URL}/reset-password/${token}`,
