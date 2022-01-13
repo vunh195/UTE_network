@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "shubh",
   "license": "ISC",
@@ -25,5 +26,8 @@
     "nodemon": "^2.0.4",
     "socket.io": "^2.3.0",
     "uuid": "^8.0.0"
+  },
+  "engines": {
+    "node": "14.17.6"
   }
 }
