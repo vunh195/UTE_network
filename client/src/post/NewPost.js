@@ -170,7 +170,7 @@ class NewPost extends Component {
   render() {
     const { title, body, user, loading, error, redirectToProfile } = this.state;
     const photoUrl = user._id
-      ? `${process.env.REACT_APP_API_URL}/user/photo/${
+      ? `https://afternoon-shelf-73628.herokuapp.com//user/photo/${
           user._id
         }?${new Date().getTime()}`
       : DefaultProfile;

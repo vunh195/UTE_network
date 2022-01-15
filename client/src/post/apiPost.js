@@ -1,12 +1,15 @@
 export const create = (userId, token, post) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/new/${userId}`, {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: post,
-  })
+  return fetch(
+    `https://afternoon-shelf-73628.herokuapp.com//post/new/${userId}`,
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: post,
+    }
+  )
     .then((response) => {
       return response.json();
     })
@@ -14,7 +17,7 @@ export const create = (userId, token, post) => {
 };
 
 export const update = (postId, token, post) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/${postId}`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/${postId}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -29,9 +32,12 @@ export const update = (postId, token, post) => {
 };
 
 export const list = (skip) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/posts?skip=${skip}`, {
-    method: "GET",
-  })
+  return fetch(
+    `https://afternoon-shelf-73628.herokuapp.com//posts?skip=${skip}`,
+    {
+      method: "GET",
+    }
+  )
     .then((response) => {
       return response.json();
     })
@@ -39,7 +45,7 @@ export const list = (skip) => {
 };
 
 export const countTotalPosts = () => {
-  return fetch(`${process.env.REACT_APP_API_URL}/count/posts`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//count/posts`, {
     method: "GET",
   })
     .then((response) => {
@@ -49,7 +55,7 @@ export const countTotalPosts = () => {
 };
 
 export const singlePost = (postId) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/${postId}`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/${postId}`, {
     method: "GET",
   })
     .then((response) => {
@@ -59,14 +65,17 @@ export const singlePost = (postId) => {
 };
 
 export const listByUser = (userId, token) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/by/${userId}`, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  })
+  return fetch(
+    `https://afternoon-shelf-73628.herokuapp.com//post/by/${userId}`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  )
     .then((response) => {
       return response.json();
     })
@@ -74,7 +83,7 @@ export const listByUser = (userId, token) => {
 };
 
 export const remove = (postId, token) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/${postId}`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/${postId}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
@@ -89,7 +98,7 @@ export const remove = (postId, token) => {
 };
 
 export const like = (userId, token, postId) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/like`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/like`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -105,7 +114,7 @@ export const like = (userId, token, postId) => {
 };
 
 export const unlike = (userId, token, postId) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/unlike`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/unlike`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -121,7 +130,7 @@ export const unlike = (userId, token, postId) => {
 };
 
 export const comment = (userId, token, postId, comment) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/comment`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/comment`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -137,7 +146,7 @@ export const comment = (userId, token, postId, comment) => {
 };
 
 export const uncomment = (userId, token, postId, comment) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/post/uncomment`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//post/uncomment`, {
     method: "PUT",
     headers: {
       Accept: "application/json",

@@ -1,5 +1,5 @@
 export const read = (userId, token) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/user/${userId}`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//user/${userId}`, {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -14,7 +14,7 @@ export const read = (userId, token) => {
 };
 
 export const update = (userId, token, user) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/user/${userId}`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//user/${userId}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -29,7 +29,7 @@ export const update = (userId, token, user) => {
 };
 
 export const remove = (userId, token) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/user/${userId}`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//user/${userId}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
@@ -44,7 +44,7 @@ export const remove = (userId, token) => {
 };
 
 export const list = () => {
-  return fetch(`${process.env.REACT_APP_API_URL}/users`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//users`, {
     method: "GET",
   })
     .then((response) => {
@@ -53,7 +53,7 @@ export const list = () => {
     .catch((err) => console.log(err));
 };
 export const listAllUsers = () => {
-  return fetch(`${process.env.REACT_APP_API_URL}/users`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//users`, {
     method: "GET",
   })
     .then((response) => {
@@ -74,7 +74,7 @@ export const updateUser = (user, next) => {
 };
 
 export const follow = (userId, token, followId) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/user/follow`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//user/follow`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -90,7 +90,7 @@ export const follow = (userId, token, followId) => {
 };
 
 export const unfollow = (userId, token, unfollowId) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/user/unfollow`, {
+  return fetch(`https://afternoon-shelf-73628.herokuapp.com//user/unfollow`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -106,14 +106,17 @@ export const unfollow = (userId, token, unfollowId) => {
 };
 
 export const findPeople = (userId, token) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/user/findpeople/${userId}`, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  })
+  return fetch(
+    `https://afternoon-shelf-73628.herokuapp.com//user/findpeople/${userId}`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  )
     .then((response) => {
       return response.json();
     })
@@ -122,7 +125,7 @@ export const findPeople = (userId, token) => {
 
 export const getChats = (senderId, recieverId) => {
   return fetch(
-    `${process.env.REACT_APP_API_URL}/chats/${senderId}/${recieverId}`,
+    `https://afternoon-shelf-73628.herokuapp.com//chats/${senderId}/${recieverId}`,
     {
       method: "GET",
       headers: {
@@ -138,13 +141,16 @@ export const getChats = (senderId, recieverId) => {
 };
 
 export const getChatList = (senderId) => {
-  return fetch(`${process.env.REACT_APP_API_URL}/chatlist/${senderId}`, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  })
+  return fetch(
+    `https://afternoon-shelf-73628.herokuapp.com//chatlist/${senderId}`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    }
+  )
     .then((response) => {
       return response.json();
     })
@@ -152,7 +158,7 @@ export const getChatList = (senderId) => {
 };
 
 // export const getOnlineUsers = () => {
-//     return fetch(`${process.env.REACT_APP_API_URL}/online/users`, {
+//     return fetch(`https://afternoon-shelf-73628.herokuapp.com//online/users`, {
 //         method: "GET",
 //         headers: {
 //             Accept: "application/json",

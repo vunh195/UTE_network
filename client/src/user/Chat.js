@@ -12,7 +12,7 @@ import { DisplayTime12Hour } from "../post/timeDifference";
 import Picker from "emoji-picker-react";
 import Loading from "../loading/Loading";
 
-const socketUrl = `${process.env.REACT_APP_API_URL}`;
+const socketUrl = `https://afternoon-shelf-73628.herokuapp.com/`;
 let socket;
 
 class Chat extends Component {
@@ -203,7 +203,7 @@ class Chat extends Component {
                             <li className="person" data-chat="person1">
                               <div className="user">
                                 <img
-                                  src={`${process.env.REACT_APP_API_URL}/user/photo/${user._id}`}
+                                  src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${user._id}`}
                                   alt={user.name}
                                   onError={(i) =>
                                     (i.target.src = DefaultProfile)

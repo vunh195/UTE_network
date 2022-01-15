@@ -109,7 +109,7 @@ class Profile extends Component {
   renderProfile = () => {
     const { user, following, posts } = this.state;
     const photoUrl = user._id
-      ? `${process.env.REACT_APP_API_URL}/user/photo/${
+      ? `https://afternoon-shelf-73628.herokuapp.com//user/photo/${
           user._id
         }?${new Date().getTime()}`
       : DefaultProfile;
@@ -157,7 +157,8 @@ class Profile extends Component {
               <div className="profile-header">
                 <h2 className="header">{user.name}</h2>
                 <div className="action-buttons">
-                  { isAuthenticated().user && isAuthenticated().user._id === user._id ? (
+                  {isAuthenticated().user &&
+                  isAuthenticated().user._id === user._id ? (
                     <></>
                   ) : (
                     <div className="profile-button">
@@ -179,31 +180,32 @@ class Profile extends Component {
                         />
                       </div>
                     </div>
-                  )} 
+                  )}
                 </div>
 
-                { isAuthenticated().user && isAuthenticated().user._id != user._id ? (
-                    <></>
-                  ) : (
-                <div className="setting" ref={this.setting}>
-                  <div class="dropdown">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="dropdown-content">
-                      <a href="#">
-                        <Link
-                          className="btn btn-flat-secondary"
-                          to={`/user/edit/${user._id}`}
-                        >
-                          Edit Profile
-                        </Link>
-                      </a>
-                      <a href="#">
-                        {" "}
-                        <DeleteUser userId={user._id} />
-                      </a>
+                {isAuthenticated().user &&
+                isAuthenticated().user._id != user._id ? (
+                  <></>
+                ) : (
+                  <div className="setting" ref={this.setting}>
+                    <div class="dropdown">
+                      <i class="fas fa-ellipsis-h"></i>
+                      <div class="dropdown-content">
+                        <a href="#">
+                          <Link
+                            className="btn btn-flat-secondary"
+                            to={`/user/edit/${user._id}`}
+                          >
+                            Edit Profile
+                          </Link>
+                        </a>
+                        <a href="#">
+                          {" "}
+                          <DeleteUser userId={user._id} />
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
                 )}
               </div>
 
@@ -228,7 +230,7 @@ class Profile extends Component {
                               style={{ objectFit: "cover", padding: "0" }}
                               height="200"
                               width="200"
-                              src={`${process.env.REACT_APP_API_URL}/post/photo/${post._id}`}
+                              src={`https://afternoon-shelf-73628.herokuapp.com//post/photo/${post._id}`}
                               alt={post.title}
                             />
                             <i className="fas fa-heart">
@@ -249,7 +251,7 @@ class Profile extends Component {
                   {user.followers.map((person, i) => (
                     <div key={i} className="media user-follower">
                       <img
-                        src={`${process.env.REACT_APP_API_URL}/user/photo/${person._id}`}
+                        src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${person._id}`}
                         onError={(i) => (i.target.src = DefaultProfile)}
                         alt={person.name}
                         className="media-object pull-left mr-2"
@@ -272,7 +274,7 @@ class Profile extends Component {
                   {user.following.map((person, i) => (
                     <div key={i} className="media user-following">
                       <img
-                        src={`${process.env.REACT_APP_API_URL}/user/photo/${person._id}`}
+                        src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${person._id}`}
                         onError={(i) => (i.target.src = DefaultProfile)}
                         alt={person.name}
                         className="media-object pull-left mr-2"

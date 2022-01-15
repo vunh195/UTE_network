@@ -14,7 +14,7 @@ const isActive = (history, path) => {
   }
 };
 const photoUrl = isAuthenticated().user?._id
-  ? `${process.env.REACT_APP_API_URL}/user/photo/${
+  ? `https://afternoon-shelf-73628.herokuapp.com//user/photo/${
       isAuthenticated().user?._id
     }?${new Date().getTime()}`
   : DefaultProfile;
@@ -97,7 +97,7 @@ const Menu = (props) => (
                 to="/signin"
                 style={{ color: "white", marginTop: "10px" }}
               >
-                <i className="fas fa-sign-in-alt mr-1" ></i>Sign In
+                <i className="fas fa-sign-in-alt mr-1"></i>Sign In
               </Link>
             </li>
             <li className="nav-item">
@@ -107,7 +107,10 @@ const Menu = (props) => (
                 to="/signup"
                 style={{ color: "white", marginTop: "10px" }}
               >
-                <i class="fas fa-user-plus" style={{ marginRight: "5px" ,fontSize:"15px"}}></i>
+                <i
+                  class="fas fa-user-plus"
+                  style={{ marginRight: "5px", fontSize: "15px" }}
+                ></i>
                 Sign Up
               </Link>
             </li>

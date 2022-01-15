@@ -57,17 +57,13 @@ class FindPeople extends Component {
   renderUsers = (users) => (
     <div className="row" style={{ display: "flex", justifyContent: "center" }}>
       {users.map((user, i) => (
-        <div
-          key={i}
-          className="card col-md-3"
-          style={{margin: "15px",}}
-        >
+        <div key={i} className="card col-md-3" style={{ margin: "15px" }}>
           <img
             style={{}}
             height="250"
             width="250"
             className="card-img-top"
-            src={`${process.env.REACT_APP_API_URL}/user/photo/${user._id}`}
+            src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${user._id}`}
             onError={(i) => (i.target.src = DefaultProfile)}
             alt={user.name}
           />
@@ -77,18 +73,23 @@ class FindPeople extends Component {
           <div className="card-body">
             <Link
               to={`/user/${user._id}`}
-              className="card-link btn btn-raised " style={{borderRadius:"5px", background:"#1B91DF", color:"#ffffff"}}
+              className="card-link btn btn-raised "
+              style={{
+                borderRadius: "5px",
+                background: "#1B91DF",
+                color: "#ffffff",
+              }}
             >
               View Profile
             </Link>
             <button
               style={{
-                borderRadius:"10px"
+                borderRadius: "10px",
               }}
               onClick={() => this.clickFollow(user, i)}
               className="btn btn-raised  pull-right"
             >
-              <i class="fas fa-user-plus" style={{color:"#1B91DF"}}></i>
+              <i class="fas fa-user-plus" style={{ color: "#1B91DF" }}></i>
             </button>
           </div>
         </div>

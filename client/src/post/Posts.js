@@ -73,7 +73,7 @@ class Posts extends Component {
                       width: "40px",
                       borderRadius: "50%",
                     }}
-                    src={`${process.env.REACT_APP_API_URL}/user/photo/${posterId}`}
+                    src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${posterId}`}
                     onError={(i) => (i.target.src = DefaultProfile)}
                     alt={posterName}
                   />
@@ -93,7 +93,7 @@ class Posts extends Component {
               <Link to={`/post/${post._id}`}>
                 <img
                   className="card-img-top"
-                  src={`${process.env.REACT_APP_API_URL}/post/photo/${post._id}`}
+                  src={`https://afternoon-shelf-73628.herokuapp.com//post/photo/${post._id}`}
                   alt={post.title}
                   style={{
                     maxHeight: "400px",
