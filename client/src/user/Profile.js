@@ -109,7 +109,7 @@ class Profile extends Component {
   renderProfile = () => {
     const { user, following, posts } = this.state;
     const photoUrl = user._id
-      ? `https://afternoon-shelf-73628.herokuapp.com//user/photo/${
+      ? `https://afternoon-shelf-73628.herokuapp.com/user/photo/${
           user._id
         }?${new Date().getTime()}`
       : DefaultProfile;
@@ -230,7 +230,7 @@ class Profile extends Component {
                               style={{ objectFit: "cover", padding: "0" }}
                               height="200"
                               width="200"
-                              src={`https://afternoon-shelf-73628.herokuapp.com//post/photo/${post._id}`}
+                              src={`https://afternoon-shelf-73628.herokuapp.com/post/photo/${post._id}`}
                               alt={post.title}
                             />
                             <i className="fas fa-heart">
@@ -251,7 +251,7 @@ class Profile extends Component {
                   {user.followers.map((person, i) => (
                     <div key={i} className="media user-follower">
                       <img
-                        src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${person._id}`}
+                        src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${person._id}`}
                         onError={(i) => (i.target.src = DefaultProfile)}
                         alt={person.name}
                         className="media-object pull-left mr-2"
@@ -274,7 +274,7 @@ class Profile extends Component {
                   {user.following.map((person, i) => (
                     <div key={i} className="media user-following">
                       <img
-                        src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${person._id}`}
+                        src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${person._id}`}
                         onError={(i) => (i.target.src = DefaultProfile)}
                         alt={person.name}
                         className="media-object pull-left mr-2"

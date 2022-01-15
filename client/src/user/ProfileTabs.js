@@ -22,7 +22,7 @@ class ProfileTabs extends Component {
                       className="float-left mr-2"
                       height="30px"
                       width="30px"
-                      src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${person._id}`}
+                      src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${person._id}`}
                       onError={(i) => (i.target.src = DefaultProfile)}
                       alt={person.name}
                     />
@@ -46,7 +46,7 @@ class ProfileTabs extends Component {
                       className="float-left mr-2"
                       height="30px"
                       width="30px"
-                      src={`https://afternoon-shelf-73628.herokuapp.com//user/photo/${person._id}`}
+                      src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${person._id}`}
                       onError={(i) => (i.target.src = DefaultProfile)}
                       alt={person.name}
                     />

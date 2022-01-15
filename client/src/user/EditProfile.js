@@ -196,7 +196,7 @@ class EditProfle extends Component {
       return <Redirect to={`/user/${isAuthenticated().user._id}`}></Redirect>;
     }
     const photoUrl = id
-      ? `https://afternoon-shelf-73628.herokuapp.com//user/photo/${id}?${new Date().getTime()}`
+      ? `https://afternoon-shelf-73628.herokuapp.com/user/photo/${id}?${new Date().getTime()}`
       : DefaultProfile;
 
     return (

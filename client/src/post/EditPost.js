@@ -155,7 +155,7 @@ class EditProfle extends Component {
     if (redirectToPost) {
       return <Redirect to={`/post/${id}`}></Redirect>;
     }
-    const photoUrl = `https://afternoon-shelf-73628.herokuapp.com//post/photo/${id}?${new Date().getTime()}`;
+    const photoUrl = `https://afternoon-shelf-73628.herokuapp.com/post/photo/${id}?${new Date().getTime()}`;
 
     return (
       <div className="container">
