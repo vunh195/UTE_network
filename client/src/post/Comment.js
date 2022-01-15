@@ -178,7 +178,7 @@ class Comment extends Component {
                   <li key={i} className="media">
                     <Link to={`/user/${comment.postedBy._id}`}>
                       <img
-                        src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${comment.postedBy._id}`}
+                        src={`https://ute-network.herokuapp.com/user/photo/${comment.postedBy._id}`}
                         onError={(i) => (i.target.src = DefaultProfile)}
                         alt={comment.postedBy.name}
                         className="rounded-circle z-depth-2 mr-2"

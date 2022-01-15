@@ -1,5 +1,5 @@
 export const signup = (user) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/signup`, {
+  return fetch(`https://ute-network.herokuapp.com/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -14,7 +14,7 @@ export const signup = (user) => {
 };
 
 export const signin = (user) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/signin`, {
+  return fetch(`https://ute-network.herokuapp.com/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -41,7 +41,7 @@ export const signout = (callback) => {
     localStorage.removeItem("jwt");
   }
   callback();
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/signout`, {
+  return fetch(`https://ute-network.herokuapp.com/signout`, {
     method: "GET",
   })
     .then((response) => {
@@ -64,7 +64,7 @@ export const isAuthenticated = () => {
 
 export const forgotPassword = (email) => {
   console.log("email: ", email);
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/forgot-password/`, {
+  return fetch(`https://ute-network.herokuapp.com/forgot-password/`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -80,7 +80,7 @@ export const forgotPassword = (email) => {
 };
 
 export const resetPassword = (resetInfo) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/reset-password/`, {
+  return fetch(`https://ute-network.herokuapp.com/reset-password/`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -96,7 +96,7 @@ export const resetPassword = (resetInfo) => {
 };
 
 export const socialLogin = (user) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/social-login/`, {
+  return fetch(`https://ute-network.herokuapp.com/social-login/`, {
     method: "POST",
     headers: {
       Accept: "application/json",

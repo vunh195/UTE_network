@@ -63,7 +63,7 @@ class FindPeople extends Component {
             height="250"
             width="250"
             className="card-img-top"
-            src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${user._id}`}
+            src={`https://ute-network.herokuapp.com/user/photo/${user._id}`}
             onError={(i) => (i.target.src = DefaultProfile)}
             alt={user.name}
           />

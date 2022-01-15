@@ -135,7 +135,7 @@ class SinglePost extends Component {
             <img
               className="mb-1 mr-2"
               style={{ height: "40px", width: "40px", borderRadius: "50%" }}
-              src={`https://afternoon-shelf-73628.herokuapp.com/user/photo/${posterId}`}
+              src={`https://ute-network.herokuapp.com/user/photo/${posterId}`}
               onError={(i) => (i.target.src = DefaultProfile)}
               alt={posterName}
             />
@@ -176,7 +176,7 @@ class SinglePost extends Component {
         <Link to={`/post/${post._id}`}>
           <img
             className="card-img-top"
-            src={`https://afternoon-shelf-73628.herokuapp.com/post/photo/${post._id}`}
+            src={`https://ute-network.herokuapp.com/post/photo/${post._id}`}
             alt={post.title}
             style={{
               maxHeight: "700px",

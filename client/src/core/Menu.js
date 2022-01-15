@@ -14,7 +14,7 @@ const isActive = (history, path) => {
   }
 };
 const photoUrl = isAuthenticated().user?._id
-  ? `https://afternoon-shelf-73628.herokuapp.com/user/photo/${
+  ? `https://ute-network.herokuapp.com/user/photo/${
       isAuthenticated().user?._id
     }?${new Date().getTime()}`
   : DefaultProfile;

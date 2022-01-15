@@ -1,5 +1,5 @@
 export const read = (userId, token) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/user/${userId}`, {
+  return fetch(`https://ute-network.herokuapp.com/user/${userId}`, {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -14,7 +14,7 @@ export const read = (userId, token) => {
 };
 
 export const update = (userId, token, user) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/user/${userId}`, {
+  return fetch(`https://ute-network.herokuapp.com/user/${userId}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -29,7 +29,7 @@ export const update = (userId, token, user) => {
 };
 
 export const remove = (userId, token) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/user/${userId}`, {
+  return fetch(`https://ute-network.herokuapp.com/user/${userId}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
@@ -44,7 +44,7 @@ export const remove = (userId, token) => {
 };
 
 export const list = () => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/users`, {
+  return fetch(`https://ute-network.herokuapp.com/users`, {
     method: "GET",
   })
     .then((response) => {
@@ -53,7 +53,7 @@ export const list = () => {
     .catch((err) => console.log(err));
 };
 export const listAllUsers = () => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/users`, {
+  return fetch(`https://ute-network.herokuapp.com/users`, {
     method: "GET",
   })
     .then((response) => {
@@ -74,7 +74,7 @@ export const updateUser = (user, next) => {
 };
 
 export const follow = (userId, token, followId) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/user/follow`, {
+  return fetch(`https://ute-network.herokuapp.com/user/follow`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -90,7 +90,7 @@ export const follow = (userId, token, followId) => {
 };
 
 export const unfollow = (userId, token, unfollowId) => {
-  return fetch(`https://afternoon-shelf-73628.herokuapp.com/user/unfollow`, {
+  return fetch(`https://ute-network.herokuapp.com/user/unfollow`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -106,17 +106,14 @@ export const unfollow = (userId, token, unfollowId) => {
 };
 
 export const findPeople = (userId, token) => {
-  return fetch(
-    `https://afternoon-shelf-73628.herokuapp.com/user/findpeople/${userId}`,
-    {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  )
+  return fetch(`https://ute-network.herokuapp.com/user/findpeople/${userId}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
     .then((response) => {
       return response.json();
     })
@@ -125,7 +122,7 @@ export const findPeople = (userId, token) => {
 
 export const getChats = (senderId, recieverId) => {
   return fetch(
-    `https://afternoon-shelf-73628.herokuapp.com/chats/${senderId}/${recieverId}`,
+    `https://ute-network.herokuapp.com/chats/${senderId}/${recieverId}`,
     {
       method: "GET",
       headers: {
@@ -141,16 +138,13 @@ export const getChats = (senderId, recieverId) => {
 };
 
 export const getChatList = (senderId) => {
-  return fetch(
-    `https://afternoon-shelf-73628.herokuapp.com/chatlist/${senderId}`,
-    {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }
-  )
+  return fetch(`https://ute-network.herokuapp.com/chatlist/${senderId}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  })
     .then((response) => {
       return response.json();
     })
@@ -158,7 +152,7 @@ export const getChatList = (senderId) => {
 };
 
 // export const getOnlineUsers = () => {
-//     return fetch(`https://afternoon-shelf-73628.herokuapp.com/online/users`, {
+//     return fetch(`https://ute-network.herokuapp.com/online/users`, {
 //         method: "GET",
 //         headers: {
 //             Accept: "application/json",
